@@ -1,0 +1,36 @@
+//*****************************************************************************
+// Title:         MarketDateEvents
+// Description:   MarketDateEvents description
+// Dependencies:  None
+// Author:        exinglo
+//
+//*****************************************************************************
+package com.apama.lab.marketdata;
+
+
+
+// 1-145
+
+event BestBidAsk{//股市返回来的股票实时数据信息
+	string symbol;
+	float bestBid;
+	float bestAsk;
+}
+
+//先inject的listener先执行
+
+monitor myMonitor{
+	action onload{
+		on all BestBidAsk(symbol = "EUR/USD") {  // on all BestBidAsk(symbol = "EUR/USD", *, *) 对于symbol的过滤要分开写，数字的话，可以指定range [] ()
+			
+		}
+	}
+}
+
+//所有的event template都会被初始化为false
+// on not BestBidAsk(), 一开始就会被执行，而且因为没有all，所以只执行一次
+// on BestBidAsk(), BestBidAsk默认为false，trigger之后，BestBidAsk被设置为true，然后就不再执行了,这个listener会从内存中移出掉，因为没写all。
+// on all not BestBidAsk(), 在不发信息的情况下，会死循环
+
+
+

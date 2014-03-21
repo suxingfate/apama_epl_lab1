@@ -1,0 +1,30 @@
+//*****************************************************************************
+// Title:         FirstTest
+// Description:   FirstTest description
+// Dependencies:  None
+// Author:        exinglo
+//
+//*****************************************************************************
+event A{
+	
+}
+
+event B{
+	A a;
+	
+	action splitAtring(string src) returns sequence<string>{
+		sequence<string> mySeq := new sequence<string>;   // = means evaluation
+		return mySeq;
+	}
+}
+
+
+// TODO: Monitors and event definitions here
+monitor FirstTest {
+	sequence<string> seq;
+	dictionary<string,string> dic;
+	
+	action onload{
+		
+	}
+}

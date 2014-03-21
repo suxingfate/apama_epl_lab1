@@ -1,0 +1,2529 @@
+VERS 00000001 4
+HEAD 00001352 <?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="/resources/transform.xslt"?><header><componentName>correlator</componentName><version>5.1.0.0</version><build>rel/5.1.0.x@217480</build><buildPlatform>amd64-win64-msvc9</buildPlatform><platform>Windows 7 (Service Pack 1)</platform><cputype>GenuineIntel family 6 model 10 stepping 9        Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz</cputype><cpus>4</cpus><javaEnabled>true</javaEnabled><replayLogMode>replayLog</replayLogMode><args><arg>C:\Program Files\SoftwareAG\Apama 5.1\bin\correlator.exe</arg><arg>--logQueueSizePeriod</arg><arg>0</arg><arg>--port</arg><arg>15903</arg><arg>--loglevel</arg><arg>INFO</arg><arg>--name</arg><arg>Apama Studio Correlator for LimitLab1(LimitLab1:Default Correlator)</arg><arg>-j</arg><arg>--replayLog</arg><arg>logs/Default_Correlator_${START_TIME}_${ID}.replay.log</arg></args><environment><variable>%SCALA_HOME%=C:\Program Files (x86)\scala</variable><variable>ALLUSERSPROFILE=C:\ProgramData</variable><variable>APAMA_HOME=C:\Program Files\SoftwareAG\Apama 5.1</variable><variable>APAMA_WORK=C:\Users\exinglo\SoftwareAG\ApamaWork_5.1</variable><variable>APPDATA=C:\Users\exinglo\AppData\Roaming</variable><variable>CLASSPATH=.;C:\Program Files\Java\jdk1.6.0_37\lib;C:\Program Files\Java\jdk1.6.0_37\lib\tools.jar</variable><variable>COMMONPROGRAMFILES=C:\Program Files\Common Files</variable><variable>COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files</variable><variable>COMMONPROGRAMW6432=C:\Program Files\Common Files</variable><variable>COMPUTERNAME=E738EAA787E4DE</variable><variable>COMSPEC=C:\Windows\system32\cmd.exe</variable><variable>FP_NO_HOST_CHECK=NO</variable><variable>HOMEDRIVE=C:</variable><variable>HOMEPATH=\Users\exinglo</variable><variable>JAVA_HOME=C:\Program Files\Java\jdk1.6.0_37</variable><variable>LOCALAPPDATA=C:\Users\exinglo\AppData\Local</variable><variable>LOGONSERVER=\\ERISGSC02</variable><variable>M2=C:\Users\exinglo\Documents\UPG\apache-maven-2.2.1\bin</variable><variable>M2_HOME=C:\Users\exinglo\Documents\UPG\apache-maven-2.2.1</variable><variable>NUMBER_OF_PROCESSORS=4</variable><variable>OS=Windows_NT</variable><variable>PATH=C:\Program Files\SoftwareAG\Apama 5.1\third_party\jre\bin\server;C:\Program Files\SoftwareAG\Apama 5.1\third_party\jre\bin;C:\Program Files\SoftwareAG\Apama 5.1\third_party\jre\lib\amd64\server;C:\Program Files\SoftwareAG\Apama 5.1\third_party\jre\lib\amd64;C:\Program Files\SoftwareAG\Apama 5.1\bin;C:\Program Files (x86)\KDiff3\bin;%SCALA_HOME%\bin;C:\Users\exinglo\Documents\UPG\apache-maven-2.2.1\bin;C:\Program Files\Java\jdk1.6.0_37\bin;C:\Program Files\Java\jdk1.6.0_37\jre\bin;C:\Users\exinglo\Documents\GameD\php-5.2.10-Win32-VC6-x86;C:\Python27\Lib\site-packages\PyQt4\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x64;C:\Python27;C:\Program Files (x86)\scala\\bin;C:\Program Files (x86)\sbt\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\nodejs\;C:\Program Files\TortoiseGit\bin;C:\Users\exinglo\AppData\Roaming\npm</variable><variable>PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</variable><variable>PROCESSOR_ARCHITECTURE=AMD64</variable><variable>PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel</variable><variable>PROCESSOR_LEVEL=6</variable><variable>PROCESSOR_REVISION=3a09</variable><variable>PROGRAMDATA=C:\ProgramData</variable><variable>PROGRAMFILES=C:\Program Files</variable><variable>PROGRAMFILES(X86)=C:\Program Files (x86)</variable><variable>PROGRAMW6432=C:\Program Files</variable><variable>PROMPT=$P$G</variable><variable>PSMODULEPATH=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\</variable><variable>PUBLIC=C:\Users\Public</variable><variable>SBT_HOME=C:\Program Files (x86)\sbt\</variable><variable>SYSTEMDRIVE=C:</variable><variable>SYSTEMROOT=C:\Windows</variable><variable>TEMP=C:\Users\exinglo\AppData\Local\Temp</variable><variable>TMP=C:\Users\exinglo\AppData\Local\Temp</variable><variable>USERDNSDOMAIN=ERICSSON.SE</variable><variable>USERDOMAIN=ERICSSON</variable><variable>USERDOMAIN_ROAMINGPROFILE=ERICSSON</variable><variable>USERNAME=exinglo</variable><variable>USERPROFILE=C:\Users\exinglo</variable><variable>VBOX_INSTALL_PATH=C:\Program Files\Oracle VM VirtualBox\</variable><variable>WINDIR=C:\Windows</variable><variable>WINDOWS_TRACING_FLAGS=3</variable><variable>WINDOWS_TRACING_LOGFILE=C:\BVTBin\Tests\installpackage\csilogfile.log</variable></environment><version>5.1.0.0</version></header>
+RAND 0000000a 3839025189
+TIME 00000010 1395408429.571,1
+CONN 0000003e 16389049091090743296/16389049091090743296 from 127.0.0.1:53143
+TIME 0000000e 1395408429.9,1
+MONF 00000a87 //*****************************************************************************
+// Title:       ScenarioDeleterSupport
+// Description: Provides event definitions for deleting Scenario instances. 
+//
+// Revision:    $Id: ScenarioDeleterSupport.mon 215887 2013-10-28 13:26:52Z matj $
+//
+// $Copyright(c) 2004-2005, 2008-2009 Progress Software Corporation (PSC). All rights reserved.$
+// $Copyright (c) 2013 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or Terracotta Inc., San Francisco, CA, USA, and/or Software AG (Canada) Inc., Cambridge, Ontario, Canada, and/or, Software AG (UK) Ltd., Derby, United Kingdom, and/or Software A.G. (Israel) Ltd., Or-Yehuda, Israel and/or their licensors.$
+// Use, reproduction, transfer, publication or disclosure is prohibited except as specifically provided for in your License Agreement with Software AG
+//
+//*****************************************************************************
+
+package com.apama.scenarios;
+
+event DeleteAllScenarios {
+}
+
+event DeleteScenariosByUser {
+	string owner;
+}
+
+event SubscribeDeleteScenariosToContext {
+	context instanceContext;
+}
+
+event UnsubscribeDeleteScenariosToContext {
+	context instanceContext;
+}
+
+monitor ScenarioDeleterSupport {
+	
+	dictionary<integer, context> deleteContexts;
+	dictionary<integer, integer> deleteListenerCounts;
+	
+	
+	action onload() {
+		
+		SubscribeDeleteScenariosToContext sds;
+		on all SubscribeDeleteScenariosToContext():sds {
+			integer ctxId := sds.instanceContext.getId(); 
+			deleteContexts[ctxId] := sds.instanceContext;
+			if (deleteListenerCounts.hasKey(ctxId)) then {
+				deleteListenerCounts[ctxId] := deleteListenerCounts[ctxId] + 1; 
+			} else {
+				deleteListenerCounts[ctxId] := 0;
+			}
+
+		}
+
+		UnsubscribeDeleteScenariosToContext uds;
+		on all UnsubscribeDeleteScenariosToContext():uds {
+			integer ctxId := uds.instanceContext.getId(); 
+			deleteContexts[ctxId] := uds.instanceContext;
+			if (deleteListenerCounts.hasKey(ctxId)) then {
+				if (deleteListenerCounts[ctxId] > 0) then {
+					deleteListenerCounts[ctxId] := deleteListenerCounts[ctxId] - 1; 
+				} 
+				if (deleteListenerCounts[ctxId] = 0) then {
+					deleteListenerCounts.remove(ctxId);
+				}
+			} 
+		}
+
+		
+		DeleteAllScenarios deleteAll;
+		on all DeleteAllScenarios():deleteAll {
+			integer cid;
+			for cid in deleteContexts.keys() {
+				enqueue deleteAll to deleteContexts[cid];
+			}
+		}
+		
+		DeleteScenariosByUser deleteByUser;
+		on all DeleteScenariosByUser():deleteByUser {
+			integer cid;
+			for cid in deleteContexts.keys() {
+				enqueue deleteByUser to deleteContexts[cid];
+			}
+		}
+	}
+	
+}
+ 0000005a C:\Program Files\SoftwareAG\Apama 5.1\monitors\scenario_support\ScenarioDeleterSupport.mon
+RMDT 00000015 &INPUT(1,5,true,true)
+TIME 0000000c 1395408430,1
+MONF 00012470 package com.apama.scenario;
+
+/**
+ * This file contains the shared event definitions that are generic across 
+ * all Scenarios.  
+ *
+ * WARNING: 
+ *    The event definitions contained in this file form an internal protocol 
+ *    and may change between software releases.
+ *
+ * Notes:
+ * 1) The Event definitions contained in this file MUST be considered
+ *    as an internal implementation of the communications protocol
+ *    between the Apama client API and an Apama server.  As such
+ *    these event definitions MUST NOT be considered "stable" and are 
+ *    subject to change in any future software release.
+ *
+ *    The ONLY supported public APIs to the Scenario Service are the 
+ *    Java client API (in the com.apama.services.scenario package) and the 
+ *    .NET client API (in the Apama.Services.Scenario namespace).  
+ *    Customers should not attempt to interface at the event or 
+ *    EPL layer. Some events have been changed over time (as 
+ *    noted here).
+ *
+ * 2) Most events now contain an initial field called "scenarioId". This string 
+ *    uniquely identifies a scenario inside the correlator, and is used as 
+ *    the package name, in several events, and for making up a part of the 
+ *    data and control channel names.
+ *
+ * 3) Events that are intended to be used in a request-response pattern contain
+ *    a "messageId" field.  The value of this field must be copied from the 
+ *    request event into the response event. The mechanism allows clients to 
+ *    match up request-response pairs.
+ *
+ *
+ * $Copyright(c) 2005-2011 Progress Software Corporation (PSC). All rights reserved.$
+ * $Copyright (c) 2013 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or Terracotta Inc., San Francisco, CA, USA, and/or Software AG (Canada) Inc., Cambridge, Ontario, Canada, and/or, Software AG (UK) Ltd., Derby, United Kingdom, and/or Software A.G. (Israel) Ltd., Or-Yehuda, Israel and/or their licensors.$
+ * Use, reproduction, transfer, publication or disclosure is prohibited except as specifically provided for in your License Agreement with Software AG
+ *
+ * $Revision: 216311 $
+ */
+
+/**
+ * Request that a new instance of a specific scenario is created.
+ *
+ * See also: Created(), Acknowledge()
+ *
+ * Direction: From the client to the correlator.
+ *
+ * Response: Acknowledge()
+ */
+event Create {
+	string scenarioId;                   // the unique name of the scenario
+	integer messageId;                   // the unique message ID (for request-response matching)
+	string owner;                        // the owner (user) of the instance.
+	sequence<string> inputFieldValues;   // sequence of INPUT field values in string form
+}
+
+
+/**
+ * Notifies all interested clients that a new instance of a specific 
+ * scenario has been created. 
+ * The event provides the owner (user), initial state, and initial values for 
+ * all input fields and all output fields.
+ *
+ * See also: Create()
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: <scenarioId>.Data and <scenarioId>.Data.Raw
+ */
+event Created { 
+	string scenarioId;                   // the unique name of the scenario
+	integer messageId;                   // the unique message ID (for request-response matching)
+	integer scenarioInstanceId;          // the ID of the scenario instance
+	string owner;                        // the owner (user) of the instance.
+	string state;                        // the initial state of the instance.
+	sequence<string> inputFieldValues;   // sequence of INPUT field values in string form
+	sequence<string> outputFieldValues;  // sequence of OUTPUT field values in string form
+}
+
+
+/**
+ * Notifies the interested clients of child scenarios created from
+ * a parent scenario.
+ *
+ * Direction: Internal in the correlator
+ *
+ * Channel: <none>
+ */
+event ParentChildRelationship {
+	string parentScenarioId;
+	integer parentScenarioInstanceId;
+	string childScenarioId;
+	integer childScenarioInstanceId;
+}
+
+
+/**
+ * Request that a specific instance of a specific scenario is edited (the input 
+ * field values are changed).
+ *
+ * See also: Edited(), Acknowledge()
+ *
+ * Direction: From the client to the correlator.
+ *
+ * Response: Acknowledge()
+ */
+event Edit { 
+	string scenarioId;                   // the unique name of the scenario
+	integer messageId;                   // the unique message ID (for request-response matching)
+	integer scenarioInstanceId;          // the ID of the scenario instance
+	sequence<string> inputFieldValues;   // sequence of INPUT field values in string form
+}
+
+
+/**
+ * Notifies all interested clients that a specific instance of a specific 
+ * scenario has been edited (the input field values have changed).
+ *
+ * See also: Edit()
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: <scenarioId>.Data and <scenarioId>.Data.Raw
+ */
+event Edited { 
+	string scenarioId;                   // the unique name of the scenario
+	integer messageId;                   // the unique message ID (for request-response matching)
+	integer scenarioInstanceId;          // the ID of the scenario instance
+	sequence<string> inputFieldValues;   // sequence of INPUT field values in string form
+	sequence<string> outputFieldValues;  // sequence of OUTPUT field values in string form
+}
+
+
+/**
+ * Request that a specific instance of a specific scenario is deleted.
+ *
+ * See also: Deleted(), Acknowledge()
+ *
+ * Direction: From the client to the correlator.
+ *
+ * Response: Acknowledge()
+ */
+event Delete {
+	string scenarioId;                   // the unique name of the scenario
+	integer messageId;                   // the unique message ID (for request-response matching)
+	integer scenarioInstanceId;          // the ID of the scenario instance
+}
+
+
+/**
+ * Notifies all interested clients that a specific instance of a specific 
+ * scenario has been deleted.
+ *
+ * See also: Delete()
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: <scenarioId>.Data and <scenarioId>.Data.Raw
+ */
+event Deleted {
+	string scenarioId;                   // the unique name of the scenario
+	integer messageId;                   // the unique message ID (for request-response matching)
+	integer scenarioInstanceId;          // the ID of the scenario instance
+}
+
+
+/**
+ * Indicates that a specific instance of a specific scenario has died.
+ * This is emitted as a result of a scenario instance use of MonitorScript ondie.
+ * This occurs for any of deleting a running scenario, a scenario failing, or 
+ * entering the end state.
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: <scenarioId>.Data and <scenarioId>.Data.Raw
+ */
+event InstanceDied {
+	string scenarioId;                   // the unique name of the scenario
+	integer scenarioInstanceId;          // the ID of the scenario instance
+}
+
+
+/**
+ * Contains updated scenario instance output fields.
+ * Note that this is the ONLY event type that is emitted on the 
+ * "<scenarioId>.Data" channel.
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: <scenarioId>.Data and <scenarioId>.Data.Raw
+ */
+event Update { 
+	string scenarioId;                   // the unique name of the scenario
+	integer scenarioInstanceId;          // the ID of the scenario instance
+	float timeStamp;                     // the time of the update (seconds since epoch)
+	sequence<string> outputFieldValues;  // sequence of OUTPUT field values in string form
+}
+
+
+/**
+ * A general Acknowledgement event that is the "response" to various "request"
+ * events such as Create, Edit, Delete.
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: <scenarioId>.Control
+ */
+event Acknowledge { 
+	string scenarioId;                   // the unique name of the scenario
+	integer messageId;                   // the unique message ID (for request-response matching)
+	integer scenarioInstanceId;          // the id of the scenario instance
+	boolean success;                     // boolean indication of success
+	sequence<string> outputFieldValues;  // sequence of the OUTPUT field values in string form, 
+	                                     //   or an empty sequence if success = false
+}
+
+
+/**
+ * Indicates that a specific instance of a specific scenario has changed 
+ * state, where valid states include "ENDED", "FAILED", "RUNNING".
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: <scenarioId>.Data and <scenarioId>.Data.Raw
+ */
+event StateChange { 
+	string scenarioId;                   // the unique name of the scenario.
+	integer scenarioInstanceId;          // the ID of the scenario instance.
+	string state;                        // the new state.
+}
+
+
+/**
+ * Request that each scenario loaded in the correlator send its meta
+ * information out on the supplied channel. When all scenarios have
+ * sent out this information, a final RequestScenariosDone event will
+ * be sent on the same channel.
+ *
+ * As soon as this event is received, a RequestScenariosAck will be
+ * sent on the same channel so client can stop resending the RequestScenarios
+ * event.
+ *
+ * See also: Scenario, RequestScenariosDone, RequestScenariosAck
+ *
+ * Direction: From the client to the correlator.
+ *
+ * Response: Scenario() from each loaded scenario.
+ */
+event RequestScenarios { 
+	// renamed for clarity - was Request
+	string channel;                      // Name of the private response channel.
+}
+
+
+/**
+ * This is a simple marker event that is sent by the correlator to indicate 
+ * that it has finished sending all of the Scenario events in response
+ * to a RequestScenarios event.
+ * 
+ * See also: RequestScenarios, Scenario.
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: The private channel that was specified in the RequestScenarios event.
+ */
+event RequestScenariosDone {}
+
+/* This is a simple ack event that is sent by the correlator to indicate the
+ * RequestScenarios event is received and the request is being processed
+ *
+ * See also: RequestScenarios
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: The private channel that was specified in the RequestScenarios event.
+ */
+event RequestScenariosAck {}
+
+/**
+ * Request that each instance of the specified scenario send an Instance event 
+ * out on the supplied channel. When all instances for the scenario have been 
+ * sent out, a final RequestInstancesDone event will be sent on the same channel.
+ *
+ * See also: Instance, RequestInstancesDone
+ *
+ * Direction: From the client to the correlator.
+ *
+ * Response: Instance() from each scenario instance.
+ */
+event RequestInstancesOnChannel { 
+	string scenarioId;                   // Identifier of the scenario for which to return instances. 
+	integer messageId;                   // the unique message ID (for request-response matching)
+	string channel;                      // Name of the private response channel.
+}
+
+/**
+ * Request that each instance for the specified user of the specified scenario
+ * send an Instance event out on the supplied channel. When all instances for
+ * the scenario have been sent out, a final RequestInstancesDone event will be 
+ * sent on the same channel.
+ *
+ * See also: Instance, RequestInstancesDone
+ *
+ * Direction: From the client to the correlator.
+ *
+ * Response: Instance() from each scenario instance.
+ */
+event RequestInstancesOnChannelByUser { 
+	string scenarioId;                   // Identifier of the scenario for which to return instances. 
+	integer messageId;                   // the unique message ID (for request-response matching)
+	string channel;                      // Name of the private response channel.
+	string owner;                        // the username to filter by
+}
+
+
+/**
+ * This is a simple marker event that is sent by the correlator to indicate 
+ * that it has finished sending all of the Instance events in response
+ * to a RequestInstancesInternal event.
+ * 
+ * See also: RequestInstancesInternal, Scenario.
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: A unique private channel as specified by the client in a 
+ *          RequestScenariosOnChannel event.
+ *
+ *          Note that previously it would have been on <scenarioId>.Data and 
+ *          <scenarioId>.Data.Raw, but that behaviour is now deprecated.
+ */
+event RequestInstancesDone {
+	string scenarioId;                   // Identifier of the scenario for instances were returned. 	
+	integer messageId;                   // the unique message ID (for request-response matching)
+}
+
+
+/**
+ * Describes the meta-information about a scenario that is loaded in the 
+ * correlator.
+ * 
+ * See also: RequestScenarios, RequestScenariosDone, ScenarioUnloaded
+ * 
+ * Direction: From correlator to client.
+ *
+ * Channel:   1) com.apama.scenario to broadcast when loaded.
+ *            2) A unique private channel as specified by the client in a 
+ *               RequestScenarios event.
+ *
+ * This event has gained the executionMode field in Apama 4.2
+ */
+event Scenario {
+	string scenarioId;                   // unique identifier for Scenario, e.g. Scenario_statistical$002darbitrage
+	string displayName;                  // user-specified name for Scenario, e.g. statistical-arbitrage
+	string description;                  // description of the Scenario
+	sequence<string> inputNames;         // input parameter names
+	sequence<string> inputTypes;         // input parameter types
+	sequence<string> inputConstraints;   // input parameter contraints
+	sequence<string> inputDefaults;      // input parameter default values
+	sequence<string> outputNames;        // output parameter names
+	sequence<string> outputTypes;        // output parameter types
+	integer executionMode;               // 0 = serial, 1 = parallel, 2 = parallel child. New as of 4.2
+}
+
+
+
+/**
+ * Indicates that a specific Scenario definition is being unloaded.
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: <scenarioId>.Control
+ */
+event ScenarioUnloaded { 
+	string scenarioId;                   // the unique name of the scenario
+}
+
+/**
+ * Provides a dump of the current state of a scenario instance.
+ * The event definition is identical to the Created event, and includes the 
+ * owner (user), initial state, and current values for all input fields and 
+ * all output fields.
+ *
+ * Instance events are sent in response to RequestInstancesOnChannel event 
+ * and the deprecated RequestInstancesInternal event; 
+ *
+ * See also: RequestInstancesOnChannel, RequestInstancesDone, RequestInstancesInternal
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: A unique private channel as specified by the client in a 
+ *          RequestScenariosOnChannel event.
+ *
+ *          Note that previously it would have been on <scenarioId>.Data and 
+ *          <scenarioId>.Data.Raw, but that behaviour is now deprecated.
+ */
+event Instance {
+	string scenarioId;                   // the unique name of the scenario. 
+	integer messageId;                   // the unique message ID (for request-response matching)
+	integer scenarioInstanceId;          // the ID of the scenario instance. 
+	string owner;                        // the owner (user) of the instance.
+	string state;                        // the initial state of the instance.
+	sequence<string> inputFieldValues;   // sequence of INPUT field values in string form. 
+	sequence<string> outputFieldValues;  // sequence of OUTPUT field values in string form. 
+}
+
+
+/**
+ * Indicates this shared MonitorScript has been loaded.
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: com.apama.scenario to broadcast when loaded.
+ */
+event ScenarioServiceLoaded { 
+}
+
+/**
+ * Indicates this shared MonitorScript is being unloaded.
+ *
+ * Direction: From the correlator to the client.
+ *
+ * Channel: com.apama.scenario to broadcast when unloaded.
+ */
+event ScenarioServiceUnloaded { 
+}
+
+
+/**
+ * Set the period over which updates will be queued and coalesced before being
+ * sent out on the data channel. Defaults to zero, which means they won't be
+ * queued. If it is negative then we won't send any updates on the data channel.
+ * This event is deprecated and the ConfigureUpdates event should be used 
+ * instead (see below)
+ */
+event SetThrottlingPeriod {
+	float period;   // The period in seconds. Default zero.
+}
+
+
+/**
+ * Configures how updates are sent from scenarios.
+ * Each scenario is controlled by two configurations - a global default,
+ * and an optional per scenario configuration.  The per scenario
+ * configuration takes precedence over the global default.
+ * The configuration is made up of a number of entries in 
+ * the configuration dictionary. The ConfigureUpdate event 
+ * is merged into any previous configuration.
+ *
+ * Global configuration can be modified by specifying an empty string 
+ * for scenarioId, and empty values remove values.
+ */
+event ConfigureUpdates {
+	string scenarioId; // empty indicates a default 
+	/** 
+	 * A set of the configurations modified by this event
+	 * the key and meaning is one of:
+	 * sendThrottled - boolean - whether to send Updates to the 
+	 *                           Throttled (.Data) channel (default=true)
+	 * throttlePeriod - float - period with which to send Updates. 
+	 *                          0.0 means updates are not throttled - 
+	 *                          every update is sent on the Throttled 
+	 *                          channel. (default=0.0)
+	 * sendRaw - boolean - whether to send Updates on the Raw channel 
+	 *                     (.Raw) (default=true)
+ 	 * sendThrottledUser - boolean - whether to send Updates to the 
+	 *                     throttled filtered (.Data:username) channel
+	 *                     (default=false)
+ 	 * sendRawUser - boolean - whether to send Updates to the Raw 
+	 *                     channel (.Raw:username) (default=false)
+	 * routeUpdate - boolean - whether to route Update (and Edited, Deleted) events.
+	 * An empty value removes that entry from the configuration
+	 */
+	dictionary<string,string> configuration;
+}
+
+/**
+ * Immediately flushes to receivers any scenario Update events that were 
+ * waiting for the next throttling period before being sent. 
+ * 
+ */
+event SendQueuedUpdatesNow {
+	
+}
+
+/* ==========================================================================
+ * The following describes INTERNAL event definitions that should not be sent 
+ * into the correlator, nor relied upon.
+ * ==========================================================================
+ */
+
+/**
+ * Request that each instance of the specified scenario send an Instance event 
+ * out on the scenario Data or Raw channel. When all instances for the scenario
+ * have been sent out, a final RequestInstancesDone event will be sent on the 
+ * same channel.
+ *
+ * See also: Instance, RequestInstancesDone, RequestInstancesOnChannel, RequestInstancesOnChannelByUser
+ *
+ * Direction: From the ScenarioService to the scenario
+ *
+ * Response: Instance() from each scenario instance, RequestInstancesDone when finished.
+ */
+event RequestInstancesInternal { 
+	string scenarioId;                   // Identifier of the scenario for which to return instances. 
+	integer messageId;                   // the unique message ID (for request-response matching)
+	string channel;                      // Name of the private response channel.
+	boolean internal;                    // if true, events should be routed/ enqueue-to'd the main context
+	string owner;                        // owner filter (optional)
+	boolean ownerFilter;                 // whether to filter by owner
+}
+
+/**
+ * A scenario has finished running, but is still discoverable.
+ * (i.e. entered end state or failed - but not deleted).
+ * Note that this event contains the state as of the last
+ * Update/ Edited event - i.e. if an action modified an output variable 
+ * and then caused the scenario to fail, the prior modification
+ * would not be reflected in this event.
+ *
+ * This event contains sufficient information for discovery of the
+ * scenario instance later
+ * 
+ * Direction: from scenarios to the ScenarioService sub-monitor (spawned per scenario)
+ */
+event ScenarioFinished {
+	string scenarioId;                   // Identifier of the scenario which has failed. 
+	integer scenarioInstanceId;          // the ID of the scenario instance. 
+	string owner;                        // the owner (user) of the instance.
+	string state;                        // the initial state of the instance.
+	sequence<string> inputFieldValues;   // sequence of INPUT field values in string form. 
+	sequence<string> outputFieldValues;  // sequence of OUTPUT field values in string form. 
+}
+/**
+ * Only used internally to tell all the scenarios to start routing their
+ * meta data (Scenario). It is followed by a sweeper FinishedScenarioRecovery
+ * event which indicates that all the scenarios have reported in.
+ */
+event StartScenarioRecovery {}
+
+/**
+ * Sweeper event to indicate that scenario recovery is done. Only used internally.
+ */
+event FinishedScenarioRecovery {}
+
+/**
+ * Trigger discovery of a parallel scenario. Sent from a sub-monitor of
+ * ScenarioService to RequestInstancesHandler to create a new sub-monitor.
+ */
+event RequestInstancesParallel {
+	RequestInstancesInternal request;          // the original request event
+	dictionary<integer, context> instances;    // all scenario instances and their running context
+	integer highestInstanceId;                 // the highest scenarioInstanceId listed in instances (or more accurately, the highest when discovery started)
+}
+
+/**
+ * Discovery protocol of a parallel scenario. Sent from a scenario instance
+ * to RequestInstancesHandler.
+ */
+event RequestInstancesParallelDone {
+	string scenarioId;                   // the unique name of the scenario
+	integer messageId;                   // the unique message ID (for request-response matching)
+	integer scenarioInstanceId;          // the ID of the scenario instance
+}
+
+/**
+ * Notification of a new scenario instance
+ */
+event ParallelStarting {
+	string scenarioId;                   // the unique name of the scenario
+	integer scenarioInstanceId;          // the ID of the scenario instance
+	string owner;                        // the owner of the scenario instance
+	context runningCtx;                  // the context the scenario is running in
+}
+
+/**
+ * Get the current configuration for a given scenario and the default configuration
+ */
+event GetConfiguration {
+	string scenarioId;                   // the unique name of the scenario
+}
+
+/**
+ * The current configuration for a given scenario and the default configuration
+ * @see ConfigureUpdates
+ */
+event Configuration {
+	string scenarioId;                        // the unique name of the scenario
+	dictionary<string, string> defaults;      // the global defaults
+	dictionary<string, string> configuration; // the scenario configuration (takes precedence)
+}
+
+
+/**
+ * An operation has completed. Sent from parallel scenarios to the main context.
+ */
+event OperationCompleted {
+	string scenarioId;
+	integer scenarioInstanceId;
+	integer messageId;
+}
+
+/**
+ * Notification that a scenario has loaded a ConfigureUpdates event
+ */
+event ScenarioProcessedUpdates {
+	string scenarioId;
+}
+
+/**
+ * Request all configuration
+ */
+event GetAllConfiguration {
+	integer requestId;
+}
+
+/** 
+ * Response all configuration
+ */
+event AllConfiguration {
+	integer requestId;
+	dictionary<string, string> defaultConfig;
+	dictionary<string, dictionary<string, string> > configurations;
+}
+
+
+/**
+ * Library of utiltiy actions
+ */
+event ScenarioServiceLibrary {
+
+	/**
+	 * Get the control channel for a scenario Id. This channel
+	 * is always enabled (uses an event set scenario ID)
+	 */
+	action getControlChannel(string scenarioId) returns string
+	{
+		return scenarioId+".Control";
+	}
+	/**
+	 * Get the data channel for a scenario ID. This channel 
+	 * is enabled by the sendThrottled configuration key and 
+	 * the throttlePeriod key (Update events may be throttled)
+	 */
+	action getDataChannel(string scenarioId) returns string
+	{
+		return scenarioId+".Data";
+	}
+	/**
+	 * Get the raw channel for a scenario ID. This channel
+	 * is enabled by the sendRaw configuration key.
+	 */
+	action getRawChannel(string scenarioId) returns string
+	{
+		return scenarioId+".Data.Raw";
+	}
+	/**
+	 * Get the data channel for a scenario Id. This channel 
+	 * is enabled by the sendThrottledUser configuration key and 
+	 * the throttlePeriod key (Update events may be throttled)
+	 */
+	action getDataUserChannel(string channel, string owner) returns string
+	{
+		return channel+":"+owner;
+	}
+	/**
+	 * Get the raw channel for a scenario Id. This channel
+	 * is enabled by the sendRawUser configuration key.
+	 */
+	action getRawUserChannel(string channel, string owner) returns string
+	{
+		return channel+":"+owner;
+	}
+	
+	/**
+	 * Merge configuration. Any entries in updates overwrite entries in configuration.
+	 * An empty string value removes the value.
+	 * @see ConfigureUpdates
+	 */
+	action mergeConfiguration(dictionary<string, string> updates, dictionary<string, string> configuration) {
+		string k;
+		for k in updates.keys() {
+			configuration[k]:=updates[k];
+			if updates[k]="" then {
+				configuration.remove(k);
+			}
+		}
+	}
+	
+	// implementation note: the defaults for sendThrottled, sendRaw, throttlePeriod, etc are in the following actions:
+	/**
+	 * Get the sendThrottled value from the given configuration
+	 * @see ConfigureUpdates
+	 */
+	action getSendThrottled(dictionary<string,string> defaults, dictionary<string,string> config) returns boolean {
+		string c:=getConfig(defaults, config, "sendThrottled", "true");
+		return c = "true";
+	}
+
+	/**
+	 * Get the sendThrottledUser value from the given configuration
+	 * @see ConfigureUpdates
+	 */
+	action getSendThrottledUser(dictionary<string,string> defaults, dictionary<string,string> config) returns boolean {
+		string c:=getConfig(defaults, config, "sendThrottledUser", "false");
+		return c = "true";
+	}
+	
+	/**
+	 * Get the sendRaw value from the given configuration
+	 * @see ConfigureUpdates
+	 */
+	action getSendRaw(dictionary<string,string> defaults, dictionary<string,string> config) returns boolean {
+		string c:=getConfig(defaults, config, "sendRaw", "true");
+		return c = "true";
+	}
+	
+	/**
+	 * Get the sendRawUser value from the given configuration
+	 * @see ConfigureUpdates
+	 */
+	action getSendRawUser(dictionary<string,string> defaults, dictionary<string,string> config) returns boolean {
+		string c:=getConfig(defaults, config, "sendRawUser", "false");
+		return c = "true";
+	}
+	
+	/**
+	 * Get the throttlePeriod value from the given configuration
+	 * @see ConfigureUpdates
+	 */
+	action getThrottlePeriod(dictionary<string,string> defaults, dictionary<string,string> config) returns float {
+		string c:=getConfig(defaults, config, "throttlePeriod", "0.0");
+		return float.parse(c);
+	}
+	
+	/**
+	 * Get the routeUpdate value from the given configuration
+	 * @see ConfigureUpdates
+	 */
+	action getRouteUpdate(dictionary<string,string> defaults, dictionary<string,string> config) returns boolean {
+		string c:=getConfig(defaults, config, "routeUpdate", "false");
+		return c = "true";
+	}
+	
+
+	/**
+	 * Get the specified key from the configuration dictionaries, reverting to the default 
+	 * if none specified.
+	 */
+	action getConfig(dictionary<string,string> defaults,
+	                 dictionary<string,string> config, 
+	                 string key, string _default) returns string {
+		if config.hasKey(key) then {
+			return config[key];
+		}
+		if defaults.hasKey(key) then {
+			return defaults[key];
+		}
+		return _default;
+	}
+
+	action configurationManager(dictionary<string, string> defaultConfig, dictionary<string, dictionary<string, string> > configurations) {
+		// the recognised ConfigureUpdates configuration keys, as above:
+		dictionary<string,boolean> KNOWN_CONFIG_KEYS := {"sendThrottled":true, "throttlePeriod":false,
+		 "sendRaw":true, "sendThrottledUser":true, "sendRawUser":true, "routeUpdate":true};
+
+		dictionary <string,string> EMPTY_DICT:=new dictionary<string,string>;
+		ConfigureUpdates cu;
+		on all ConfigureUpdates():cu {
+			string key;
+			for key in cu.configuration.keys() {
+				if not KNOWN_CONFIG_KEYS.hasKey(key) then {
+					log "Unrecognized configuration property "+key+" in event "+cu.toString() at WARN;
+				}
+			}
+			if cu.scenarioId = "" then {
+				mergeConfiguration(cu.configuration, defaultConfig);
+				log "Received "+cu.toString()+" : defaults applicable to all scenarios" at INFO;
+			} else {
+				if not configurations.hasKey(cu.scenarioId) then {
+					configurations.add(cu.scenarioId, new dictionary<string,string>);
+				}
+				mergeConfiguration(cu.configuration, configurations[cu.scenarioId]);
+				on ScenarioProcessedUpdates(cu.scenarioId) -> completed ConfigureUpdates(scenarioId=cu.scenarioId) {
+					log "Received "+cu.toString()+" : applied to scenario" at INFO;
+				}
+				on completed ConfigureUpdates(scenarioId=cu.scenarioId) and not ScenarioProcessedUpdates(cu.scenarioId) {
+					log "Received "+cu.toString()+" : for scenario that is not yet defined" at INFO;
+				}
+			}
+		}
+
+		GetConfiguration getConfig;
+		on all GetConfiguration():getConfig {
+			dictionary<string,string> config:=EMPTY_DICT;
+			if configurations.hasKey(getConfig.scenarioId) then {
+				config:=configurations[getConfig.scenarioId];
+			}
+			route Configuration(getConfig.scenarioId, defaultConfig, config);
+		}	
+		GetAllConfiguration gac;
+		on all GetAllConfiguration():gac {
+			route AllConfiguration(gac.requestId, defaultConfig, configurations);
+		}
+	}
+		
+}
+
+event CallbackHelper {
+	sequence<action<> > callbacks;
+	action callback {
+		action<> c;
+		for c in callbacks {
+			c();
+		}
+	}
+}
+
+
+
+/**
+ * Base event for tracking configuration for a given scenario
+ */
+event ScenarioServiceUpdaterBase {
+	// these are internal and should not be set by users
+	string scenarioId;
+	dictionary<string,string> defaultConfig;
+	dictionary<string,string> config;
+	ScenarioServiceLibrary lib;
+	boolean sendThrottled;
+	boolean sendRaw;
+	boolean sendAny;
+	boolean emitAny;
+	boolean sendThrottledUser;
+	boolean sendRawUser;
+	boolean routeUpdate;
+	float throttlePeriod;
+	float throttleStart;
+	sequence<listener> listeners;
+	string controlChannel;
+	string rawChannel;
+	string dataChannel;
+
+	/**
+	 * Called by monitor at onload time
+	 * Will maintain configuration for this scenario
+	 * @param sId the scenarioId
+	 */
+	action init(string sId, action<> cb_onUpdate) {
+		scenarioId:=sId;
+		controlChannel := lib.getControlChannel(scenarioId);
+		rawChannel := lib.getRawChannel(scenarioId);
+		dataChannel := lib.getDataChannel(scenarioId);
+		route GetConfiguration(scenarioId);
+		Configuration c;
+		listener l:=on Configuration(scenarioId=scenarioId):c {
+			config := c.configuration;
+			defaultConfig := c.defaults;
+			configurationUpdated();
+			cb_onUpdate();
+		}
+		listeners.append(l);
+	}
+
+	/**
+	 * Listen for further configuration changes.
+	 * @param cb_onUpdate callback upon configuration having been updated
+	 */	
+	action listenToConfigureUpdates(action<> cb_onUpdate) {
+		ConfigureUpdates cu;
+		listener l:=on all ConfigureUpdates(scenarioId=""):cu or all ConfigureUpdates(scenarioId=scenarioId):cu {
+			if(cu.scenarioId != "") then {
+				route ScenarioProcessedUpdates(cu.scenarioId);
+			}
+			onConfigureUpdates(cu);
+			cb_onUpdate();
+		}
+		listeners.append(l);
+	}
+
+	/**
+	 * Called when new ConfigureUpdates event available
+	 * @param sId the scenarioId
+	 */
+	action onConfigureUpdates(ConfigureUpdates cu) {
+		if cu.scenarioId = "" then {
+			lib.mergeConfiguration(cu.configuration, defaultConfig);
+		} else {
+			lib.mergeConfiguration(cu.configuration, config);
+		}
+		configurationUpdated();
+	}
+	
+	/**
+	 * Called when the configuration should be re-parsed.
+	 * @param sId the scenarioId
+	 */
+	action configurationUpdated() {
+		sendThrottled:=lib.getSendThrottled(defaultConfig, config);
+		sendThrottledUser:=lib.getSendThrottledUser(defaultConfig, config);
+		if sendThrottled or sendThrottledUser then {
+			throttlePeriod:=lib.getThrottlePeriod(defaultConfig, config);
+			if(throttlePeriod < 0.0) then {
+				sendThrottled:=false;
+				sendThrottledUser:=false;
+			}
+			throttleStart:=currentTime;
+		}
+		sendRaw:=lib.getSendRaw(defaultConfig, config);
+		sendRawUser:=lib.getSendRawUser(defaultConfig, config);
+		routeUpdate:=lib.getRouteUpdate(defaultConfig, config);
+		sendAny:= sendRaw or sendThrottled or routeUpdate or sendRawUser or sendThrottledUser;
+		emitAny:= sendRaw or sendThrottled or sendRawUser or sendThrottledUser;
+	}
+
+	/** 
+	 * Get whether this scenario should send on the throttled (Data) channel
+	 */
+	action isSendThrottled() returns boolean {
+		return sendThrottled or sendThrottledUser;
+	}
+
+	/** 
+	 * Get whether this scenario should send on the raw channel
+	 */
+	action isSendRaw() returns boolean {
+		return sendRaw or sendRawUser;
+	}
+
+	action doEmit(string emitted, string owner) {
+		if sendRaw then {
+			emit emitted to rawChannel;
+		}
+		if sendThrottled then {
+			emit emitted to dataChannel;
+		}
+		if sendRawUser then {
+			emit emitted to lib.getRawUserChannel(rawChannel, owner);
+		}
+		if sendThrottledUser then {
+			emit emitted to lib.getDataUserChannel(dataChannel, owner);
+		}
+	}
+
+	/**
+ 	 * Kill any listeners this object has started
+	 */
+	action destroy() {
+		listener l;
+		for l in listeners {
+			l.quit();
+		}
+	}
+}
+
+
+/**
+ * Utilitiy event for tracking configuration for a given scenario.
+ * This event is suitable for use by monitors which spawn per instance
+ * (e.g. Scenarios)
+ * 
+ * This event also uses a callback to get the updates (supplied in
+ * instanceInit). If the scenario is configured to only send throttled 
+ * updates, the callback is only called when the throttling period 
+ * determines an update should be sent - thus, the scenario does not
+ * need to generate the output sequence<string> except when needed,
+ * which can improve performance in such a configuration.
+ * 
+ * actions starting with an underscore should be considered private 
+ * and not called by users of this event.
+ */
+event ScenarioServiceUpdaterSingleInstance {
+	// these are internal and should not be set by users
+	string scenarioId;
+	integer scenarioInstanceId;
+	ScenarioServiceLibrary lib;
+	listener throttlingListener;
+	ScenarioServiceUpdaterBase base;
+	boolean havePending;
+	float latestUpdate;
+	action<> returns sequence<string> getUpdate;
+	Update update;
+	boolean needUpdate;
+	context mainContext;
+	string owner;
+	string controlChannel;
+	string rawChannel;
+	string dataChannel;
+
+	/**
+	 * Called by monitor at onload time
+	 * Will maintain configuration for this scenario
+	 */
+	action init(string sId) {
+		init_cb(sId, _noopAction);
+	}
+	
+	/**
+	 * Called by monitor at onload time
+	 * Will maintain configuration for this scenario.
+	 * cb_init is called when initialisation is complete
+	 */
+	action init_cb(string sId, action<> cb_init) {
+		base.init(sId, cb_init);
+		scenarioId:=sId;
+		controlChannel := lib.getControlChannel(scenarioId);
+		rawChannel := lib.getRawChannel(scenarioId);
+		dataChannel := lib.getDataChannel(scenarioId);
+		base.listenToConfigureUpdates(_noopAction);
+		mainContext:=context.current();
+	}
+
+	action _noopAction() {
+	}
+	
+
+	/**
+	 * Called by monitor after spawn
+	 * Will maintain configuration for this scenario, and update listeners appropriately.
+	 * @param getUpdateCallback a callback to get the latest outputFieldValues - may be called at any time, must 
+         *        always return a consistent set of outputs
+	 */
+	action instanceInit(integer id, action<> returns sequence<string> getUpdateCallback, string _owner) {
+		scenarioInstanceId:=id;
+		owner:=_owner;
+		getUpdate:=getUpdateCallback;
+		update.scenarioId:=scenarioId;
+		update.scenarioInstanceId:=scenarioInstanceId;
+		base.listenToConfigureUpdates(_configurationUpdated);
+		_configurationUpdated();
+		listener l:=on all SendQueuedUpdatesNow() {
+			_sendThrottledUpdate();
+		}
+		base.listeners.append(l);
+	}
+
+	/** 
+	 * Get whether this scenario should route updates
+	 */
+	action isRouteUpdate() returns boolean {
+		return base.routeUpdate;
+	}
+
+	/**
+ 	 * Kill any listeners this object has started
+	 */
+	action destroy() {
+		base.destroy();
+		throttlingListener.quit();
+	}
+	  
+	/**
+	 * called in instances (not factories) when configuration has changed
+	 */
+	action _configurationUpdated {
+		if base.isSendThrottled() then {
+			throttlingListener.quit();
+			flushPending();
+			if(base.throttlePeriod >= 0.0) then {
+				if havePending then {
+					_setupThrottleListener();
+				}
+			}
+		}
+	}
+
+	/**
+	 * set up a throttled listener according to throttlePeriod control
+	 */
+	action _setupThrottleListener {
+		if base.throttlePeriod > 0.0 then {
+			float offset:=currentTime-base.throttleStart;
+			float t:=((offset/base.throttlePeriod).floor()+1).toFloat();
+			throttlingListener:=on wait((t*base.throttlePeriod)-offset) {
+				_sendThrottledUpdate();
+			}
+		} else {
+			_sendThrottledUpdate();
+		}
+	}
+
+	/**
+	 * actually send an update on the throttled channel
+	 */
+	action _sendThrottledUpdate {
+		if not havePending then {
+			return;
+		}
+		if needUpdate then {
+			update.outputFieldValues:=getUpdate();
+			update.timeStamp:=latestUpdate;
+			needUpdate:=false;
+		}
+		if base.sendThrottled then {
+			emit update to dataChannel;
+		}
+		if base.sendThrottledUser then {
+			emit update to lib.getDataUserChannel(dataChannel, owner);
+		}
+		havePending:=false;
+	}
+
+	/**
+	 * flush any pending update on the throttled channel.
+	 */
+	action flushPending() {
+		if havePending then {
+			_sendThrottledUpdate();
+			throttlingListener.quit();
+		}
+	}	
+
+	/**
+ 	 * Called when a new update is available.
+	 */
+	action newUpdateAvailable() {
+		needUpdate:=true;
+		latestUpdate:=currentTime;
+ 		if base.sendRaw or base.routeUpdate then {
+			if needUpdate then {
+				update.outputFieldValues:=getUpdate();
+				update.timeStamp:=currentTime;
+				needUpdate:=false;
+			}
+			if base.sendRaw then {
+				emit update to rawChannel;
+			}
+			if base.sendRawUser then {
+				emit update to lib.getRawUserChannel(rawChannel, owner);
+			}
+			if base.routeUpdate then {
+				route update;
+			}
+		}
+		if base.isSendThrottled() and not havePending then {
+			havePending:=true;
+			_setupThrottleListener();
+		}
+	}
+	
+	/**
+ 	 * Called to emit a new Acknowledgement event.
+	 */
+	action emitAcknowledgement(integer messageId) {
+		Acknowledge ack:=Acknowledge(scenarioId, messageId, scenarioInstanceId, true, getUpdate());
+		if base.routeUpdate then {
+			route ack;
+		}
+		if base.emitAny then {
+			emit ack to controlChannel;
+		}
+	}
+				
+	/**
+ 	 * Called to emit a new Nak event.
+	 */
+	action emitNack(integer messageId) {
+		Acknowledge nack:=Acknowledge(scenarioId, messageId, scenarioInstanceId, false, new sequence<string>);
+		if base.routeUpdate then {
+			route nack;
+		}
+		if base.emitAny then {
+			emit nack to controlChannel;
+		}
+	}
+	
+	/**
+ 	 * Called to emit a new Created event.
+	 */
+	action emitCreated(integer messageId, string owner, string state, sequence<string> inputVariables, sequence<string> outputVariables) {
+		if base.sendAny then {
+			Created created:=Created(scenarioId, messageId, scenarioInstanceId, owner, state, inputVariables, outputVariables);
+			route created;
+			if base.emitAny then {
+				base.doEmit(created.toString(), owner);
+			}
+		}
+	}
+	
+	/**
+ 	 * Called to emit a new Edited event.
+	 */
+	action emitEdited(integer messageId, sequence<string> inputVariables) {
+		flushPending();
+		if base.sendAny then {
+			Edited edited:=Edited(scenarioId, messageId, scenarioInstanceId, inputVariables, getUpdate());
+			if base.routeUpdate then {
+				route edited;
+			}
+			if base.emitAny then {
+				base.doEmit(edited.toString(), owner);
+			}
+		}
+		emitOpCompleted(messageId);
+	}
+
+	/**
+ 	 * Called to say an operation has completed; implied by emitEdited. Must be called before emitInstanceDied.
+	 */
+	action emitOpCompleted(integer messageId) {
+		if(context.current().getId()!=mainContext.getId()) then {
+			enqueue OperationCompleted(scenarioId, scenarioInstanceId, messageId) to mainContext;
+		}
+	}
+
+	/**
+ 	 * Called to emit a new Deleted event.
+	 */
+	action emitDeleted(integer messageId) {
+		flushPending();
+		if base.sendAny then {
+			Deleted deleted:=Deleted(scenarioId, messageId, scenarioInstanceId);
+			if base.routeUpdate then {
+				route deleted;
+			}
+			if base.emitAny then {
+				base.doEmit(deleted.toString(), owner);
+			}
+		}
+		throttlingListener.quit();
+		notifyInstanceDied();
+	}
+
+	/**
+ 	 * Called to emit an instance Died event (either of failed, ended)
+	 */
+	action emitInstanceDied() {
+		flushPending();
+		if base.sendAny then {
+			InstanceDied iDied:=InstanceDied(scenarioId, scenarioInstanceId);
+			if base.emitAny then {
+				base.doEmit(iDied.toString(), owner);
+			}
+			if mainContext.getId()=context.current().getId() then {
+				route iDied;
+			}
+		}
+		throttlingListener.quit();
+	}
+
+	/**
+ 	 * Called to notify the scenario service monitor that we have gone away - must be called 
+ 	 * after emitting any events regarding this instance going away. Implied by emitDeleted.
+	 */
+	action notifyInstanceDied() {
+		if mainContext.getId()!=context.current().getId() then {
+			InstanceDied iDied:=InstanceDied(scenarioId, scenarioInstanceId);
+			enqueue iDied to mainContext;
+		}
+	}
+	
+	/**
+ 	 * Called to emit a new StateChange event.
+	 */
+	action emitStateChange(string state) {
+		flushPending();
+		StateChange stchange:=StateChange(scenarioId, scenarioInstanceId, state);
+		if mainContext.getId()!=context.current().getId() then {
+			enqueue stchange to mainContext;
+		} else {
+			route stchange;
+		}
+		if base.emitAny then {
+			base.doEmit(stchange.toString(), owner);
+		}
+	}
+
+	/**
+ 	 * Called to emit an instance in response to a RequestInstancesInternal event
+	 */
+	action emitInstance(RequestInstancesInternal request, string owner, string state, sequence<string> input, sequence<string> output) {
+		Instance instance:=Instance(scenarioId, request.messageId, scenarioInstanceId, owner, state, input, output);
+		if request.internal then {
+			if mainContext.getId() != context.current().getId() then {
+				enqueue instance to mainContext;
+			} else {
+				route instance;
+			}
+		} else {
+			if(base.emitAny) then {
+				emit instance to request.channel;
+			}
+		}
+		if mainContext.getId() != context.current().getId() then {
+			enqueue RequestInstancesParallelDone(scenarioId, request.messageId, scenarioInstanceId) to mainContext;
+		}
+	}
+
+	/**
+ 	 * Called when the instance has failed.  input and output are the input
+ 	 * and output variables as at the last Update/ Edited point.
+	 */
+	action finished(string state, string owner, sequence<string> input, sequence<string> output) {
+		ScenarioFinished scenFinished:=ScenarioFinished(scenarioId, scenarioInstanceId, owner, state, input, output);
+		if mainContext.getId() != context.current().getId() then {
+			enqueue scenFinished to mainContext;
+		} else {
+			route scenFinished;
+		}
+	}
+	
+}
+
+
+/**
+ * Utilitiy event for tracking configuration for a given scenario.
+ * This event is suitable for use by monitors which spawn per scenario,
+ * but not per instance. (e.g. ScenarioService, DataViewService)
+ * 
+ * actions starting with an underscore should be considered private 
+ * and not called by users of this event.
+ * 
+ * Note that this updater only honours sendThrottledUser changes at the next throttling period
+ * (it does not record the owner if sendThrottledUser is not true)
+ */
+event ScenarioServiceUpdaterMultipleInstances {
+	// these are internal and should not be set by users
+	string scenarioId;
+	ScenarioServiceLibrary lib;
+	listener throttlingListener;
+	ScenarioServiceUpdaterBase base;
+	boolean currentlySendingThrottledUser;
+	dictionary<integer, Update> updates;
+	dictionary<integer, string> owners;
+	context mainContext;
+	string controlChannel;
+	string rawChannel;
+	string dataChannel;
+
+	/**
+	 * Called by monitor for each scenario
+	 * Will maintain configuration for this scenario Id
+	 */
+	action init(string sId, context mainCtx) {
+		_init(sId, mainCtx, _configurationUpdated);
+	}
+	
+	/**
+	 * Called by monitor for each scenario
+	 * Will maintain configuration for this scenario Id
+	 */
+	action init_cb(string sId, context mainCtx, action<> cb_initComplete) {
+		CallbackHelper callbackHelper:=new CallbackHelper;
+		callbackHelper.callbacks.append(cb_initComplete);
+		callbackHelper.callbacks.append(_configurationUpdated);
+		_init(sId, mainCtx, callbackHelper.callback);
+	}
+
+	/**
+	 * Implementation of init and init_cb
+	 */
+	action _init(string sId, context mainCtx, action<> cb_initComplete) {
+		base.init(sId, cb_initComplete);
+		mainContext:=mainCtx;
+		scenarioId:=sId;
+		controlChannel := lib.getControlChannel(scenarioId);
+		rawChannel := lib.getRawChannel(scenarioId);
+		dataChannel := lib.getDataChannel(scenarioId);
+		listener l:=on all SendQueuedUpdatesNow() {
+			_sendThrottledUpdates();
+		}
+		base.listeners.append(l);
+		base.listenToConfigureUpdates(_configurationUpdated);
+	}
+	
+	/** 
+	 * Get whether this scenario should route updates
+	 */
+	action isRouteUpdate() returns boolean {
+		return base.routeUpdate;
+	}
+
+	/**
+ 	 * Kill any listeners this object has started
+	 */
+	action destroy() {
+		base.destroy();
+		throttlingListener.quit();
+	}
+	  
+
+	/**
+	 * called in instances (not factories) when configuration has changed
+	 */
+	action _configurationUpdated {
+		if base.isSendThrottled() then {
+			throttlingListener.quit();
+			flushPending();
+			if(base.throttlePeriod >= 0.0) then {
+				_setupThrottleListener();
+			}
+		}
+	}
+
+	/**
+	 * set up a throttled listener according to throttlePeriod control
+	 */
+	action _setupThrottleListener {
+		if base.throttlePeriod > 0.0 then {
+			throttlingListener:=on all wait(base.throttlePeriod) {
+				_sendThrottledUpdates();
+			}
+		} else {
+			_sendThrottledUpdates();
+		}
+	}
+
+	/**
+	 * actually send an update on the throttled channel
+	 */
+	action _sendThrottledUpdates {
+		integer instance;
+		if base.sendThrottled then {
+			for instance in updates.keys() {
+				emit updates[instance] to dataChannel;
+			}
+		}
+		if currentlySendingThrottledUser then {
+			for instance in updates.keys() {
+				emit updates[instance] to lib.getDataUserChannel(dataChannel, owners[instance]);
+			}
+		}
+		owners.clear();
+		updates.clear();
+		currentlySendingThrottledUser := base.sendThrottledUser;
+	}
+
+	/**
+	 * flush any pending update on the throttled channel.
+	 */
+	action flushPending() {
+		_sendThrottledUpdates();
+	}	
+
+	/**
+ 	 * Flush pending throttled data for one instance
+	 */
+	action flushPendingInstance(integer scenarioInstanceId) {
+		if updates.hasKey(scenarioInstanceId) then {
+			if base.sendThrottled then {
+				emit updates[scenarioInstanceId] to dataChannel;
+			}
+			if currentlySendingThrottledUser then {
+				emit updates[scenarioInstanceId] to lib.getDataUserChannel(dataChannel, owners[scenarioInstanceId]);
+			}
+			updates.remove(scenarioInstanceId);
+			if owners.hasKey(scenarioInstanceId) then {
+				owners.remove(scenarioInstanceId);
+			}
+		}
+	}	
+
+	/**
+ 	 * Called when a new update is available. (This variant allows setting of the time parameter)
+	 */
+	action emitUpdate_time(integer scenarioInstanceId, float time, sequence<string> output, string owner) {
+		if base.sendAny then {
+			Update update:=Update(scenarioId, scenarioInstanceId, time, output);
+			if base.sendRaw then {
+				emit update to rawChannel;
+			}
+			if base.sendRawUser then {
+				emit update to lib.getRawUserChannel(rawChannel, owner);
+			}
+			if base.routeUpdate then {
+				route update;
+			}
+			if base.isSendThrottled() then {
+				if base.throttlePeriod > 0.0 then {
+					updates.add(scenarioInstanceId, update);
+					if currentlySendingThrottledUser then {
+						owners.add(scenarioInstanceId, owner);
+					}
+				} else {
+					emit update to dataChannel;
+				}
+			}
+		}
+	}
+	
+	/**
+ 	 * Called when a new update is available.
+	 */
+	action emitUpdate(integer scenarioInstanceId, sequence<string> output, string owner) {
+		emitUpdate_time(scenarioInstanceId, currentTime, output, owner);
+	}
+
+	/**
+ 	 * Called to emit a new Acknowledgement event.
+	 */
+	action emitAcknowledgement(integer messageId, integer scenarioInstanceId, sequence<string> output) {
+		Acknowledge ack:=Acknowledge(scenarioId, messageId, scenarioInstanceId, true, output);
+		if base.routeUpdate then {
+			route ack;
+		}
+		if base.emitAny then {
+			emit ack to controlChannel;
+		}
+	}
+				
+	/**
+ 	 * Called to emit a new Nak event.
+	 */
+	action emitNack(integer messageId, integer scenarioInstanceId) {
+		Acknowledge nack:=Acknowledge(scenarioId, messageId, scenarioInstanceId, false, new sequence<string>);
+		if base.routeUpdate then {
+			route nack;
+		}
+		if base.emitAny then {
+			emit nack to controlChannel;
+		}
+	}
+	
+	/**
+ 	 * Called to emit a new Created event.
+	 */
+	action emitCreated(integer messageId, integer scenarioInstanceId, string owner, string state, sequence<string> inputVariables, sequence<string> outputVariables) {
+		if base.sendAny then {
+			Created created:=Created(scenarioId, messageId, scenarioInstanceId, owner, state, inputVariables, outputVariables);
+			route created;
+			if base.emitAny then {
+				string sCreated:=created.toString();
+				base.doEmit(sCreated, owner);
+			}
+		}
+	}
+
+	/**
+ 	 * Called to emit any received events (except for instance) for this scenario.
+	 */
+	action emitReceivedEvents() {
+		dictionary<integer, string> instanceOwners:=new dictionary<integer, string>;
+		{
+			Update update;
+			listener l:=on all Update(scenarioId = scenarioId):update {
+				if base.sendRaw then {
+					emit update to rawChannel;
+				}
+				if base.sendRawUser and instanceOwners.hasKey(update.scenarioInstanceId) then {	
+					emit update to lib.getRawUserChannel(rawChannel, instanceOwners[update.scenarioInstanceId]);
+				}
+				if base.isSendThrottled() then {
+					if base.throttlePeriod > 0.0 then {
+						updates.add(update.scenarioInstanceId, update);
+						string owner:="*";
+						if instanceOwners.hasKey(update.scenarioInstanceId) then {
+							owner:=instanceOwners[update.scenarioInstanceId];
+						}
+						if currentlySendingThrottledUser then {
+							owners.add(update.scenarioInstanceId, owner);
+						}
+					} else {
+						emit update to dataChannel;
+					}
+				}
+			}
+			base.listeners.append(l);
+		}
+		{
+			Created created;
+			listener l:=on all Created(scenarioId = scenarioId):created {
+				if(created.owner != "*") then {
+					instanceOwners.add(created.scenarioInstanceId, created.owner);
+				}
+				base.doEmit(created.toString(), created.owner);				
+			}
+			base.listeners.append(l);
+		}
+		{
+			Deleted deleted;
+			listener l:=on all Deleted(scenarioId = scenarioId):deleted {
+				flushPendingInstance(deleted.scenarioInstanceId);
+				string owner:="*";
+				if instanceOwners.hasKey(deleted.scenarioInstanceId) then {
+					owner:=instanceOwners[deleted.scenarioInstanceId];
+					instanceOwners.remove(deleted.scenarioInstanceId);
+				}
+				base.doEmit(deleted.toString(), owner);		
+			}
+			base.listeners.append(l);
+		}
+		{
+			Edited edited;
+			listener l:=on all Edited(scenarioId = scenarioId):edited {
+				flushPendingInstance(edited.scenarioInstanceId);
+				string owner:="*";
+				if instanceOwners.hasKey(edited.scenarioInstanceId) then {
+					owner:=instanceOwners[edited.scenarioInstanceId];
+				}
+				base.doEmit(edited.toString(), owner);		
+			}
+			base.listeners.append(l);
+		}
+		{
+			InstanceDied instanceDied;
+			listener l:=on all InstanceDied(scenarioId = scenarioId):instanceDied {
+				flushPendingInstance(instanceDied.scenarioInstanceId);
+				string owner:="*";
+				if instanceOwners.hasKey(instanceDied.scenarioInstanceId) then {
+					owner:=instanceOwners[instanceDied.scenarioInstanceId];
+				}
+				base.doEmit(instanceDied.toString(), owner);		
+			}
+			base.listeners.append(l);
+		}
+	}
+	
+	/**
+ 	 * Called to emit a new Edited event.
+	 */
+	action emitEdited(integer messageId, integer scenarioInstanceId, sequence<string> inputVariables, sequence<string> outputVariables, string owner) {
+		flushPendingInstance(scenarioInstanceId);
+		if base.sendAny then {
+			Edited edited:=Edited(scenarioId, messageId, scenarioInstanceId, inputVariables, outputVariables);
+			if base.routeUpdate then {
+				route edited;
+			}
+			if base.emitAny then {
+				base.doEmit(edited.toString(), owner);
+			}
+		}
+		emitOpCompleted(messageId, scenarioInstanceId);
+	}
+
+	/**
+ 	 * Called to say an operation has completed; implied by emitEdited. Must be called before emitInstanceDied.
+	 */
+	action emitOpCompleted(integer messageId, integer scenarioInstanceId) {
+		if(context.current().getId()!=mainContext.getId()) then {
+			enqueue OperationCompleted(scenarioId, scenarioInstanceId, messageId) to mainContext;
+		}
+	}
+
+	/**
+ 	 * Called to emit a new Deleted event.
+	 */
+	action emitDeleted(integer messageId, integer scenarioInstanceId, string owner) {
+		flushPendingInstance(scenarioInstanceId);
+		if base.sendAny then {
+			Deleted deleted:=Deleted(scenarioId, messageId, scenarioInstanceId);
+			if base.routeUpdate then {
+				route deleted;
+			}
+			if base.emitAny then {
+				base.doEmit(deleted.toString(), owner);
+			}
+		}
+		notifyInstanceDied(scenarioInstanceId);
+	}
+
+	/**
+ 	 * Called to notify the scenario service monitor that we have gone away - must be called 
+ 	 * after emitting any events regarding this instance going away. Implied by emitDeleted.
+	 */
+	action notifyInstanceDied(integer scenarioInstanceId) {
+		if mainContext.getId()!=context.current().getId() then {
+			InstanceDied iDied:=InstanceDied(scenarioId, scenarioInstanceId);
+			enqueue iDied to mainContext;
+		}
+	}
+	
+
+	
+	/**
+ 	 * Called to emit an instance Died event (either of failed, ended)
+	 */
+	action emitInstanceDied(integer scenarioInstanceId, string owner) {
+		flushPendingInstance(scenarioInstanceId);
+		if base.sendAny then {
+			InstanceDied iDied:=InstanceDied(scenarioId, scenarioInstanceId);
+			if base.emitAny then {
+				base.doEmit(iDied.toString(), owner);
+			}
+			if mainContext.getId()=context.current().getId() then {
+				route iDied;
+			}
+		}
+	}
+	
+	/**
+ 	 * Called to emit a new StateChange event.
+	 */
+	action emitStateChange(string state, integer scenarioInstanceId, string owner) {
+		flushPendingInstance(scenarioInstanceId);
+		StateChange stchange:=StateChange(scenarioId, scenarioInstanceId, state);
+		if mainContext.getId()!=context.current().getId() then {
+			enqueue stchange to mainContext;
+		} else {
+			route stchange;
+		}
+		if base.emitAny then {
+			base.doEmit(stchange.toString(), owner);
+		}
+	}
+
+	/**
+ 	 * Called to emit an instance in response to a RequestInstancesInternal event
+	 */
+	action emitInstance(RequestInstancesInternal request, integer scenarioInstanceId, string owner, string state, sequence<string> input, sequence<string> output) {
+		Instance instance:=Instance(scenarioId, request.messageId, scenarioInstanceId, owner, state, input, output);
+		if request.internal then {
+			if mainContext.getId() != context.current().getId() then {
+				enqueue instance to mainContext;
+			} else {
+				route instance;
+			}
+		} else {
+			if(base.emitAny) then {
+				emit instance to request.channel;
+			}
+		}
+		if mainContext.getId() != context.current().getId() then {
+				enqueue RequestInstancesParallelDone(scenarioId, request.messageId, scenarioInstanceId) to mainContext;
+		}
+	}
+	/**
+ 	 * Called to emit an instance that has already been seen in the current context
+	 */
+	action emitReceivedInstance(RequestInstancesInternal request, Instance instance) {
+		if request.internal then {
+			if mainContext.getId() != context.current().getId() then {
+				enqueue instance to mainContext;
+			}
+		} else {
+			if(base.emitAny) then {
+				emit instance to request.channel;
+			}
+		}
+	}
+	
+}
+
+
+/*
+ * Monitor that performs the following tasks:
+ *   - routing/emitting ScenarioServiceLoaded when the service is loaded
+ *   - routing/emitting ScenarioServiceUnloaded when the service is unloaded
+ *   - routing/emitting a nack if a Create request is ignored
+ *   - maintains latest configuration
+ *   - tracks state of ended/ failed scenarios
+ *   - forwards Edit, delete events to scenarios in other contexts
+ *
+ */
+monitor ScenarioService {
+
+	event PendingOperation {
+		integer messageId;
+		integer type; // 0 = delete, 1 = edit
+	}
+
+	listener throttledSenderListener;
+	ScenarioServiceLibrary lib;
+	RequestScenarios requestScenarios;
+	boolean requestingScenarios;
+	
+	// MetaData relating to the interface
+	dictionary<string,string> interfaceMetaData := {
+		"interface.package"     :"com.apama.scenario",
+		"interface.name"        :"ScenarioService",
+		"interface.fileName"    :"ScenarioService.mon",
+		"interface.vendor"      :"Apama",
+		"interface.version"     :"5.1.0.0",
+		"interface.fullVersion" :"rel/5.1.0.x@217480",
+		"interface.language"    :"MonitorScript"
+	};
+	
+	// Channel names	
+	string scenarioServiceChannel := "com.apama.scenario";
+	integer highestInstanceId;
+
+
+	// the first mThread handles scenario discovery and maps some events to internal events
+	action onload {
+		// print version
+		log "ScenarioService interface loaded. MetaData: "+interfaceMetaData.toString() at INFO;
+		
+		// generate the ScenarioServiceLoaded event
+		route ScenarioServiceLoaded();
+		emit ScenarioServiceLoaded() to scenarioServiceChannel;
+
+		dictionary <string,string> defaultConfig:=new dictionary<string,string>;
+		dictionary <string, dictionary<string,string> > configurations:=new dictionary<string, dictionary<string,string> >;
+		lib.configurationManager(defaultConfig, configurations);
+		RequestInstancesOnChannel requestInstancesOnChannel;
+		on all RequestInstancesOnChannel():requestInstancesOnChannel {
+			route RequestInstancesInternal(requestInstancesOnChannel.scenarioId, requestInstancesOnChannel.messageId, requestInstancesOnChannel.channel, false, "", false);
+			on RequestInstancesDone(scenarioId=requestInstancesOnChannel.scenarioId, messageId=requestInstancesOnChannel.messageId) {
+				emit RequestInstancesDone(requestInstancesOnChannel.scenarioId, requestInstancesOnChannel.messageId) to requestInstancesOnChannel.channel;
+			}
+		}
+
+		RequestInstancesOnChannelByUser requestInstancesOnChannelByUser;
+		on all RequestInstancesOnChannelByUser():requestInstancesOnChannelByUser {
+			route RequestInstancesInternal(requestInstancesOnChannelByUser.scenarioId, requestInstancesOnChannelByUser.messageId, requestInstancesOnChannelByUser.channel, false, requestInstancesOnChannelByUser.owner, true);
+			on RequestInstancesDone(scenarioId=requestInstancesOnChannelByUser.scenarioId, messageId=requestInstancesOnChannelByUser.messageId) {
+				emit RequestInstancesDone(requestInstancesOnChannelByUser.scenarioId, requestInstancesOnChannelByUser.messageId) to requestInstancesOnChannelByUser.channel;
+			}
+		}
+		Scenario scenario;
+		on all Scenario():scenario {
+			if requestingScenarios then {
+				emit scenario to requestScenarios.channel;
+			} else {
+				spawn trackScenario(scenario);
+			}
+		}
+		
+		ScenarioUnloaded scenarioUnloaded;
+		on all ScenarioUnloaded(): scenarioUnloaded {
+			emit scenarioUnloaded to scenarioServiceChannel;
+		}
+
+		
+		on all RequestScenarios():requestScenarios {
+			emit RequestScenariosAck() to requestScenarios.channel;
+			route StartScenarioRecovery();
+			route FinishedScenarioRecovery();
+			requestingScenarios:=true;
+			on FinishedScenarioRecovery() {
+				requestingScenarios:=false;
+				emit RequestScenariosDone() to requestScenarios.channel;
+			}
+		}
+
+		dictionary <string,string> EMPTY_DICT:=new dictionary<string,string>;
+		// Pick up any requests for operations on invalid scenarioIds
+		Create create;
+		on all unmatched Create(): create {
+			dictionary<string,string> config:=EMPTY_DICT;
+			if configurations.hasKey(create.scenarioId) then {
+				config:=configurations[create.scenarioId];
+			}
+			Acknowledge nack := new Acknowledge;
+			nack.scenarioId := create.scenarioId;
+			nack.messageId := create.messageId;
+			nack.success := false;
+			log create.scenarioId+": Scenario create ignored - unknown scenarioId." at WARN;
+			emit nack to lib.getControlChannel(create.scenarioId);
+			if lib.getRouteUpdate(defaultConfig, config) then {
+				route nack;
+			}
+		}
+
+		// The old SetThrottlingPeriod is mapped to a ConfigureUpdates event
+		SetThrottlingPeriod setThrottlingPeriod;		
+		on all SetThrottlingPeriod():setThrottlingPeriod {
+			dictionary<string, string> configChanges:=new dictionary<string,string>;
+			if setThrottlingPeriod.period >= 0.0 then {
+				configChanges["sendThrottled"]:="true";
+				configChanges["throttlePeriod"]:=setThrottlingPeriod.period.toString();
+			} else {
+				configChanges["sendThrottled"]:="false";
+			}
+			ConfigureUpdates cu:=ConfigureUpdates("", configChanges);
+			log "Received deprecated event "+setThrottlingPeriod.toString()+", will re-route as "+cu.toString() at WARN;
+			route cu;
+		}
+	}		
+				
+	
+	action onunload {
+		// generate the ScenarioServiceUnloaded event
+		ScenarioServiceUnloaded unloaded := new ScenarioServiceUnloaded;
+		route unloaded;
+		emit unloaded to scenarioServiceChannel;
+	}
+	
+	/**
+	 * spawned per scenario, and handles any finished scenario instances.
+	 * For parallel scenarios, it also tracks which instance runs in 
+	 * which context and forwards Edit and Delete events.
+	 */
+	action trackScenario(Scenario scenario) {
+		on ScenarioUnloaded(scenarioId=scenario.scenarioId) {
+			die;
+		}
+		ScenarioServiceUpdaterMultipleInstances updater:=new ScenarioServiceUpdaterMultipleInstances;
+		updater.init(scenario.scenarioId, context.current());
+		ScenarioFinished finished;
+		on all ScenarioFinished(scenarioId=scenario.scenarioId):finished {
+			// Finished scenarios can be deleted (which terminates all listeners for this instance), 
+			// discovered, and edits are Nacked 
+			Delete delete;
+			on Delete(scenarioId=scenario.scenarioId, scenarioInstanceId = finished.scenarioInstanceId):delete {
+				updater.emitAcknowledgement(delete.messageId, finished.scenarioInstanceId, finished.outputFieldValues);
+				updater.emitDeleted(delete.messageId, finished.scenarioInstanceId, finished.owner);
+			}
+			Edit edit;
+			on all Edit(scenarioId=scenario.scenarioId, scenarioInstanceId=finished.scenarioInstanceId):edit and not 
+			            Delete(scenarioId=scenario.scenarioId, scenarioInstanceId = finished.scenarioInstanceId) {
+				updater.emitNack(edit.messageId, finished.scenarioInstanceId);
+				log scenario.displayName+"("+finished.scenarioInstanceId.toString()+ "): Scenario edit ignored - Scenario is in "+finished.state+" state." at WARN;
+			}
+			RequestInstancesInternal requestInstances;
+			if finished.owner = "*" then {
+				on all RequestInstancesInternal(scenarioId=scenario.scenarioId):requestInstances and not
+						Delete(scenarioId=scenario.scenarioId, scenarioInstanceId = finished.scenarioInstanceId) {
+					updater.emitInstance(requestInstances, finished.scenarioInstanceId,
+						finished.owner, finished.state, finished.inputFieldValues, finished.outputFieldValues);
+				}
+			} else {
+				on all (RequestInstancesInternal(scenarioId=scenario.scenarioId, ownerFilter=false):requestInstances or
+					RequestInstancesInternal(scenarioId=scenario.scenarioId, owner=finished.owner, ownerFilter=true):requestInstances) and not
+						Delete(scenarioId=scenario.scenarioId, scenarioInstanceId = finished.scenarioInstanceId) {
+					updater.emitInstance(requestInstances, finished.scenarioInstanceId,
+						finished.owner, finished.state, finished.inputFieldValues, finished.outputFieldValues);
+				}
+			}
+		}
+		if scenario.executionMode > 0 then {
+			// for parallel scenarios, we keep track of instance to context mapping:
+			dictionary<integer, context> runningCtxs := new dictionary<integer, context>;
+			// and to owner mapping:
+			dictionary<integer, string> ownerCtxs := new dictionary<integer, string>;
+			// and by user:
+			dictionary<string, dictionary<integer, context> > runningCtxsByOwner := new dictionary<string, dictionary<integer, context> >;
+			// maps from instanceId to sequence<messageId>
+			dictionary<integer, sequence<PendingOperation> > pendingOperations := new dictionary<integer, sequence<PendingOperation> >;
+			ParallelStarting starting;
+			on all ParallelStarting(scenarioId = scenario.scenarioId):starting {
+				runningCtxs.add(starting.scenarioInstanceId, starting.runningCtx);
+				ownerCtxs.add(starting.scenarioInstanceId, starting.owner);
+				if not runningCtxsByOwner.hasKey(starting.owner) then {
+					runningCtxsByOwner.add(starting.owner, new dictionary<integer, context>);
+				}
+				runningCtxsByOwner[starting.owner].add(starting.scenarioInstanceId, starting.runningCtx);
+				highestInstanceId := starting.scenarioInstanceId;
+			}
+			
+			InstanceDied died;
+			on all InstanceDied(scenarioId = scenario.scenarioId):died {
+				if runningCtxs.hasKey(died.scenarioInstanceId) then {
+					runningCtxs.remove(died.scenarioInstanceId);
+				}
+				if ownerCtxs.hasKey(died.scenarioInstanceId) then {
+					string owner:=ownerCtxs[died.scenarioInstanceId];
+					ownerCtxs.remove(died.scenarioInstanceId);
+					if runningCtxsByOwner.hasKey(owner) then {
+						if runningCtxsByOwner[owner].hasKey(died.scenarioInstanceId) then {
+							runningCtxsByOwner[owner].remove(died.scenarioInstanceId);
+						}
+						if runningCtxsByOwner[owner].size()=0 then {
+							runningCtxsByOwner.remove(owner);
+						}
+					}
+				}
+				if pendingOperations.hasKey(died.scenarioInstanceId) then {
+					PendingOperation pending;
+					for pending in pendingOperations[died.scenarioInstanceId] {
+						if pending.type = 0 then {
+							route Delete(scenario.scenarioId, pending.messageId, died.scenarioInstanceId);
+						} else {
+							if pending.type = 1 then {
+								route Edit(scenario.scenarioId, pending.messageId, died.scenarioInstanceId, new sequence<string>);
+							} else {
+								log "error: unknown pending operation type "+pending.toString() at ERROR;
+							}
+						}
+					}
+					pendingOperations.remove(died.scenarioInstanceId);
+				}
+			}
+			
+			// and forward edits, deletes:
+			Edit edit;
+			on all unmatched Edit(scenarioId = scenario.scenarioId):edit {
+				if runningCtxs.hasKey(edit.scenarioInstanceId) then {
+					enqueue edit to runningCtxs[edit.scenarioInstanceId];
+					addPendingOperation(pendingOperations, edit.scenarioInstanceId, edit.messageId, 1);
+					on OperationCompleted(scenarioId = scenario.scenarioId, scenarioInstanceId = edit.scenarioInstanceId, messageId = edit.messageId) and not
+					   ScenarioFinished(scenarioId = scenario.scenarioId, scenarioInstanceId = edit.scenarioInstanceId){
+						removePendingOperation(pendingOperations, edit.scenarioInstanceId, edit.messageId);
+					}
+				} else {
+					log scenario.displayName+"("+edit.scenarioInstanceId.toString()+"): Scenario edit ignored - unknown scenarioInstanceId." at WARN;
+					updater.emitNack(edit.messageId, edit.scenarioInstanceId);
+				}
+			}
+			Delete delete;
+			on all unmatched Delete(scenarioId = scenario.scenarioId):delete {
+				if runningCtxs.hasKey(delete.scenarioInstanceId) then {
+					enqueue delete to runningCtxs[delete.scenarioInstanceId];
+					addPendingOperation(pendingOperations, delete.scenarioInstanceId, delete.messageId, 0);
+					on OperationCompleted(scenarioId = scenario.scenarioId, scenarioInstanceId = delete.scenarioInstanceId, messageId = delete.messageId) and not
+					   ScenarioFinished(scenarioId = scenario.scenarioId, scenarioInstanceId = delete.scenarioInstanceId){
+						removePendingOperation(pendingOperations, delete.scenarioInstanceId, delete.messageId);
+					}
+				} else {
+					log scenario.displayName+"("+delete.scenarioInstanceId.toString()+"): Scenario delete ignored - unknown scenarioInstanceId." at WARN;
+					updater.emitNack(delete.messageId, delete.scenarioInstanceId);
+				}
+			}
+			
+			// and request instances is handled by a separate monitor. Note that 
+			// Finished scenarios are not in the dictionary, but are handled by the finished
+			// listener above.
+			RequestInstancesInternal reqInstances;
+			on all RequestInstancesInternal(scenarioId=scenario.scenarioId):reqInstances {
+				if reqInstances.ownerFilter then {
+					if runningCtxsByOwner.hasKey(reqInstances.owner) then {
+						dictionary<integer, context> rCtxs:=runningCtxsByOwner[reqInstances.owner];
+						if runningCtxsByOwner.hasKey("*") then {
+							rCtxs:=rCtxs.clone();
+							integer i;
+							dictionary<integer, context> wildcards:=runningCtxsByOwner["*"];
+							for i in wildcards.keys() {
+								rCtxs.add(i, wildcards[i]);
+							}
+						}
+						route RequestInstancesParallel(reqInstances, rCtxs, highestInstanceId);
+					} else {
+						if runningCtxsByOwner.hasKey("*") then {
+							route RequestInstancesParallel(reqInstances, runningCtxsByOwner["*"], highestInstanceId);
+						} else {
+							route RequestInstancesParallel(reqInstances, new dictionary<integer,context>, highestInstanceId);
+						}
+					}
+				} else {
+					route RequestInstancesParallel(reqInstances, runningCtxs, highestInstanceId);
+				}
+			}
+			ConfigureUpdates cu;
+			on all ConfigureUpdates(scenarioId=""):cu or all ConfigureUpdates(scenarioId=scenario.scenarioId):cu {
+				integer inst;
+				for inst in runningCtxs.keys() {
+					enqueue cu to runningCtxs[inst];
+				}
+			}
+			on all SendQueuedUpdatesNow() {
+				SendQueuedUpdatesNow snow:=SendQueuedUpdatesNow();
+				integer inst;
+				for inst in runningCtxs.keys() {
+					enqueue snow to runningCtxs[inst];
+				}
+			}
+		}
+	}
+	
+	action addPendingOperation(dictionary<integer,  sequence<PendingOperation> > pendingOperations, integer scenarioInstanceId, integer messageId, integer type) {
+		if not pendingOperations.hasKey(scenarioInstanceId) then {
+			pendingOperations.add(scenarioInstanceId, new sequence<PendingOperation>);
+		}
+		pendingOperations[scenarioInstanceId].append(PendingOperation(messageId, type));
+	}
+	
+	action removePendingOperation(dictionary<integer, sequence<PendingOperation> > pendingOperations, integer scenarioInstanceId, integer messageId) {
+		if not pendingOperations.hasKey(scenarioInstanceId) then {
+			return;
+		}
+		integer idx:=-1, i:=0;
+		while(i < pendingOperations[scenarioInstanceId].size()) {
+			if pendingOperations[scenarioInstanceId][i].messageId = messageId then {
+				idx:=i;
+				break;
+			}
+			i:=i+1;
+		}
+		if(idx>=0) then {
+			pendingOperations[scenarioInstanceId].remove(idx);
+		}
+		if pendingOperations[scenarioInstanceId].size() = 0 then {
+			pendingOperations.remove(scenarioInstanceId);
+		}
+	}	
+}
+
+/*
+ * Monitor that handles request instances for parallel scenarios:
+ * - on a RequestInstancesOnChannel for a parallel scenario, the ScenarioService 
+ *   routes a RequestInstancesParallel which triggers this monitor to spawn.
+ * - this waits for a response (be it to say the request instances has been 
+ *   handled or that the scenario has finished) before sending the 
+ *   RequestInstancesDone event 
+ *
+ * Note that this monitor assumes scenarioInstancesIds always increase over time.
+ */
+monitor RequestInstancesHandler {
+	RequestInstancesParallel req;
+	action onload {
+		on all RequestInstancesParallel():req {
+			spawn handleRequest();
+		}
+	}
+	
+	/**
+	 * Forward the request to every context and await responses. We remove 
+	 * instances from the dictionary upon receiving an update for them. 
+	 */
+	action handleRequest() {
+		ScenarioServiceUpdaterMultipleInstances updater:=new ScenarioServiceUpdaterMultipleInstances;
+		updater.init(req.request.scenarioId, context.current());
+		integer k;
+		for k in req.instances.keys() {
+			enqueue req.request to req.instances[k];
+		}
+		// if a scenario dies, it will send events in the order ScenarioFinished, InstanceDied:
+		ScenarioFinished finished;
+		on all ScenarioFinished(scenarioId=req.request.scenarioId, scenarioInstanceId <= req.highestInstanceId):finished {
+			// if a scenario dies after it has sent the Instance, do not send another 
+			// (the StateChange/ InstanceDied events are sufficient)
+			if(req.instances.hasKey(finished.scenarioInstanceId)) then {
+				updater.emitInstance(req.request, finished.scenarioInstanceId,
+					finished.owner, finished.state, finished.inputFieldValues, finished.outputFieldValues);
+			}
+		}
+		// A finished scenario should not be counted
+		InstanceDied died;
+		on all InstanceDied(scenarioId = req.request.scenarioId, scenarioInstanceId <= req.highestInstanceId):died {
+			if(req.instances.hasKey(died.scenarioInstanceId)) then {
+				req.instances.remove(died.scenarioInstanceId);
+				checkFinished();
+			}
+		}
+		RequestInstancesParallelDone pdone;
+		on all RequestInstancesParallelDone(scenarioId = req.request.scenarioId, messageId = req.request.messageId):pdone {
+			if(req.instances.hasKey(pdone.scenarioInstanceId)) then {
+				req.instances.remove(pdone.scenarioInstanceId);
+				checkFinished();
+			}
+		}
+		checkFinished();
+	}
+	
+	/**
+	 * Check whether we are finished.
+	 * We are finished if we have no instances left in our dictionary, in which 
+	 * case we route a RequestInstancesDone (handled by the ScenarioService monitor)
+	 * and terminate.
+	 */
+	action checkFinished() {
+		if req.instances.size()=0 then {
+			route RequestInstancesDone(req.request.scenarioId, req.request.messageId);
+			die;
+		}
+	}
+}
+
+ 00000042 C:\Program Files\SoftwareAG\Apama 5.1\monitors\ScenarioService.mon
+RMDT 00000016 &INPUT(1,45,true,true)
+RMDT 0000001f &REPLAY_ID("EmittedSeqNum",1,0)
+TIME 0000000e 1395408430.1,1
+MONF 000003b1 //*****************************************************************************
+// Title:         RouteTest
+// Description:   RouteTest description
+// Dependencies:  None
+// Author:        exinglo
+//
+//*****************************************************************************
+
+
+
+// TODO: Monitors and event definitions here
+event A1{
+	integer num;
+}
+event B1{
+	integer num;
+}
+monitor Tst {
+	action onload {
+		route A1(20);
+		route A1(30);
+		
+		on wait(0.1) {  //这里有没有wait会导致很大的区别，没有wait的话，两个A1都会被后面注册的listener捕捉，但是如果wait之后，那么两个A1都不会有listener监听而导致被抛弃。
+			//过程化的语言是第一优先级，route和注册listener都是第二优先级，之后才开始处理queue中的event
+			A1 a;
+			on all A1():a{
+				print "Detect A with value" + a.num.toString();
+				
+				route B1(a.num);
+			}
+		}
+	}
+} 0000005b C:\Users\exinglo\SoftwareAG\ApamaWork_5.1\studio_workspace\LimitLab1\monitors\RouteTest.mon
+RMDT 00000015 &INPUT(1,3,true,true)
+MONF 00000280 //*****************************************************************************
+// Title:         FirstTest
+// Description:   FirstTest description
+// Dependencies:  None
+// Author:        exinglo
+//
+//*****************************************************************************
+event A{
+	
+}
+
+event B{
+	A a;
+	
+	action splitAtring(string src) returns sequence<string>{
+		sequence<string> mySeq := new sequence<string>;   // = means evaluation
+		return mySeq;
+	}
+}
+
+
+// TODO: Monitors and event definitions here
+monitor FirstTest {
+	sequence<string> seq;
+	dictionary<string,string> dic;
+	
+	action onload{
+		
+	}
+} 0000005b C:\Users\exinglo\SoftwareAG\ApamaWork_5.1\studio_workspace\LimitLab1\monitors\FirstTest.mon
+RMDT 00000015 &INPUT(1,3,true,true)
+MONF 00000445 //*****************************************************************************
+// Title:         MarketDateEvents
+// Description:   MarketDateEvents description
+// Dependencies:  None
+// Author:        exinglo
+//
+//*****************************************************************************
+package com.apama.lab.marketdata;
+
+
+
+// 1-145
+
+event BestBidAsk{
+	string symbol;
+	float bestBid;
+	float bestAsk;
+}
+
+//先inject的listener先执行
+
+monitor myMonitor{
+	action onload{
+		on all BestBidAsk(symbol = "EUR/USD") {  // on all BestBidAsk(symbol = "EUR/USD", *, *) 对于symbol的过滤要分开写，数字的话，可以指定range [] ()
+			
+		}
+	}
+}
+
+//所有的event template都会被初始化为false
+// on not BestBidAsk(), 一开始就会被执行，而且因为没有all，所以只执行一次
+// on BestBidAsk(), BestBidAsk默认为false，trigger之后，BestBidAsk被设置为true，然后就不再执行了,这个listener会从内存中移出掉，因为没写all。
+// on all not BestBidAsk(), 在不发信息的情况下，会死循环
+
+
+
+ 0000006a C:\Users\exinglo\SoftwareAG\ApamaWork_5.1\studio_workspace\LimitLab1\eventdefinitions\MarketDateEvents.mon
+RMDT 00000015 &INPUT(1,2,true,true)
+MONF 00000a70 //*****************************************************************************
+// Title:         OffLimitMarketOrder
+// Description:   OffLimitMarketOrder description
+// Dependencies:  None
+// Author:        exinglo
+//
+//*****************************************************************************
+
+
+
+// TODO: Monitors and event definitions here
+package com.apama.lab.oms;
+
+event LimitOrder{
+	string symbol;
+	string side; //buy or sell
+	integer qty;
+	float price;
+}
+
+event NewOrder{
+	integer orderId;
+	string symbol;	
+	string side;
+	integer qty;
+	float price;
+}
+
+event OrderFinished{
+	integer orderId;
+	string symbol;	
+	string side;
+	integer qtyExecuted;
+	float priceExecuted;
+}
+
+monitor OffLimitMarketOrder{
+	action onload{
+		
+		print currentTime.toString();
+		
+		LimitOrder limitOrder;  //因为apama每次只执行一个event，所以不会出现多线程覆盖的情况，因为没有多线程
+		on all LimitOrder(side = "BUY"):limitOrder {
+			log currentTime.toString() + " Receive a buy limit order:" + limitOrder.toString();
+			com.apama.lab.marketdata.BestBidAsk tick;
+			on com.apama.lab.marketdata.BestBidAsk(symbol = limitOrder.symbol, bestAsk <=limitOrder.price): tick{ //这里会执行一个深拷贝，limitorder不会被覆盖
+				log currentTime.toString() + " " + "start buying " + tick.toString();
+				integer id := integer.getUnique();
+				route NewOrder(id, limitOrder.symbol,limitOrder.side,limitOrder.qty,tick.bestAsk);
+				OrderFinished fill;
+				on OrderFinished(orderId = id):fill {
+					log currentTime.toString() + " " + "Order " + limitOrder.symbol + " executed " + fill.qtyExecuted.toString() + " @price " + fill.priceExecuted.toString();
+				}
+			}
+			
+			//processLImitOrder(limitOrder);
+		}
+	}
+	
+	//action processLImitOrder(LimitOrder limitOrder) {
+	
+/*		while(1=1){
+			integer id := integer.getUnique();
+			route request(id);
+			on all Response(refId = id) {    前面的code会出现listener泄露， 去掉all就可以了。
+				
+			}
+		}*/
+		
+		/*on all Trade(tradeType = "new"):trade {
+			on Trade(tradeType = "cancel", tradeId = trade.id) {
+				//这里的cancel发生的几率是1%， 所以这里导致99%的listener不会被触发，也就是会常驻内存，造成listener leak, 可以设立全局dictionary存储所有trade，当发现cancel后再进行查询
+			}
+		}*/
+	//}
+	
+/*	action listenerLeak {//解决response的分之情况的2中方式
+		listener l;
+		l := on Ack() {
+			l.quit();
+		}
+		
+		listener l2;
+		l2 := on Nack() {
+			l2.quit()''
+		}
+		
+		on Ack() or not Nack() {
+			
+		}
+		on Nack() or not Ack() {
+			
+		}*/
+	
+} 00000065 C:\Users\exinglo\SoftwareAG\ApamaWork_5.1\studio_workspace\LimitLab1\monitors\OffLimitMarketOrder.mon
+RMDT 00000015 &INPUT(1,4,true,true)
+MONF 000002b8 //*****************************************************************************
+// Title:         OMSSimulator
+// Description:   OMSSimulator description
+// Dependencies:  None
+// Author:        exinglo
+//
+//*****************************************************************************
+
+
+
+// TODO: Monitors and event definitions here
+package com.apama.lab.oms;
+
+monitor Simulator{
+	action onload{
+		NewOrder n;
+		on all NewOrder():n{
+			on wait(1.0) {   //因为这里的wait，导致route stack的执行顺序发生了改变
+				log currentTime.toString() + " " + n.symbol +" " + "simulator";
+				route OrderFinished(n.orderId,n.symbol,n.side,n.qty,n.price);
+			}
+		}
+	}
+} 0000005e C:\Users\exinglo\SoftwareAG\ApamaWork_5.1\studio_workspace\LimitLab1\monitors\OMSSimulator.mon
+RMDT 00000015 &INPUT(1,1,true,true)
+TIME 0000000e 1395408430.2,1
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.2,12.4)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.8,10.9)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.3,12.5)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.8,10.9)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.4,12.6)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.7,10.8)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.5,12.7)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.6,10.7)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.6,12.8)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.5,10.6)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.5,12.8)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.4,10.5)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.7,12.9)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.5,10.6)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.6,12.8)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.4,10.5)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.7,12.9)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.5,10.6)
+RMDT 00000016 &INPUT(1,18,true,true)
+EVNT 00000078 16389049091090743296 com.apama.scenario.RequestScenarios("com.apama.scenario.private_2057570931077611528_1395408430310")
+TIME 0000000e 1395408430.3,1
+RMDT 00000015 &INPUT(1,1,true,true)
+RMDT 0000001f &REPLAY_ID("EmittedSeqNum",1,1)
+RMDT 0000001f &REPLAY_ID("EmittedSeqNum",1,2)
+EVNT 0000004c 16389049091090743296 com.apama.lab.oms.LimitOrder( "PRGS", "BUY", 100, 100 )
+TIME 0000000e 1395408448.5,1
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004c 16389049091090743296 com.apama.lab.oms.LimitOrder( "MSFT", "BUY", 100, 100 )
+TIME 0000000e 1395408463.4,1
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.2,12.4)
+TIME 0000000e 1395408469.6,1
+RMDT 00000015 &INPUT(1,1,true,true)
+RMDT 00000023 &REPLAY_ID("Integer.getUnique",1,0)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.8,10.9)
+RMDT 00000015 &INPUT(1,1,true,true)
+RMDT 00000023 &REPLAY_ID("Integer.getUnique",1,1)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.3,12.5)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.8,10.9)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.4,12.6)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.7,10.8)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.5,12.7)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.6,10.7)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.6,12.8)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.5,10.6)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.5,12.8)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.4,10.5)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.7,12.9)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.5,10.6)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.6,12.8)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.4,10.5)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("PRGS",12.7,12.9)
+RMDT 00000015 &INPUT(1,1,true,true)
+EVNT 0000004a 16389049091090743296 com.apama.lab.marketdata.BestBidAsk("MSFT",10.5,10.6)
+RMDT 00000015 &INPUT(1,1,true,true)
+TIME 0000000e 1395408470.6,1

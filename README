@@ -1,0 +1,17 @@
+This is one Excercise for Apama Training.
+The target of this excercise is to get farmilar with monitors, event,route,listener concept. And simulate how stock trade center is working.
+Main code is under eventdefinitions folder and monitors folder. The evt file under events folder is used as a data stream.
+
+Apama version: 5.1
+
+This one apama project created by Apama studio.
+
+This project could be runing by following steps:
+1 run this project as apama project
+2 go to Apama Runtime perspective
+3 find Engine Information tab and find com.apama.lab.oms.LimitOrder under Events list. Right click this event and press send button.
+4 You could send LimitOrder event out.
+com.apama.lab.oms.LimitOrder("MSFT", "BUY", 100, 13) //means you want to buy stock MSFT 100 hands at price 13USD.
+Of course you can send another LimitOrder.
+5 send marketevents.evt to apama.
+6 You will get output in your console tab.

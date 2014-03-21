@@ -1,0 +1,33 @@
+//*****************************************************************************
+// Title:         RouteTest
+// Description:   RouteTest description
+// Dependencies:  None
+// Author:        exinglo
+//
+//*****************************************************************************
+
+
+
+// TODO: Monitors and event definitions here
+event A1{
+	integer num;
+}
+event B1{
+	integer num;
+}
+monitor Tst {
+	action onload {
+		route A1(20);
+		route A1(30);
+		
+		on wait(0.1) {  //这里有没有wait会导致很大的区别，没有wait的话，两个A1都会被后面注册的listener捕捉，但是如果wait之后，那么两个A1都不会有listener监听而导致被抛弃。
+			//过程化的语言是第一优先级，route和注册listener都是第二优先级，之后才开始处理queue中的event
+			A1 a;
+			on all A1():a{
+				print "Detect A with value" + a.num.toString();
+				
+				route B1(a.num);
+			}
+		}
+	}
+}

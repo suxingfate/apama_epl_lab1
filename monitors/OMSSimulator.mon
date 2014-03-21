@@ -1,0 +1,25 @@
+//*****************************************************************************
+// Title:         OMSSimulator
+// Description:   OMSSimulator description
+// Dependencies:  None
+// Author:        exinglo
+//
+//*****************************************************************************
+
+
+
+// TODO: Monitors and event definitions here
+package com.apama.lab.oms;
+
+monitor Simulator{
+	action onload{
+		NewOrder n;
+		on all NewOrder():n{
+			on wait(1.0) {   //因为这里的wait，导致route stack的执行顺序发生了改变。如果没有wait的话，这里的逻辑是来一个tick那么久执行一个tick，整个周期结束才处理下一个tick。但是wait在这里导致wait的时候就会处理下一个tick了
+				//因为wait的优先级比较高
+				log currentTime.toString() + " " + n.symbol +" " + "simulator";
+				route OrderFinished(n.orderId,n.symbol,n.side,n.qty,n.price);
+			}
+		}
+	}
+}

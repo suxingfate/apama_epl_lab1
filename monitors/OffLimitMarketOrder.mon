@@ -1,0 +1,97 @@
+//*****************************************************************************
+// Title:         OffLimitMarketOrder
+// Description:   OffLimitMarketOrder description
+// Dependencies:  None
+// Author:        exinglo
+//
+//*****************************************************************************
+
+
+
+// TODO: Monitors and event definitions here
+package com.apama.lab.oms;
+
+event LimitOrder{//客户挂单买或者卖
+	string symbol;
+	string side; //buy or sell
+	integer qty;
+	float price;
+}
+
+event NewOrder{//生成订单提交给证券交易所simulator
+	integer orderId;
+	string symbol;	
+	string side;
+	integer qty;
+	float price;
+}
+
+event OrderFinished{//证券交易所完成交易返回结果
+	integer orderId;
+	string symbol;	
+	string side;
+	integer qtyExecuted;
+	float priceExecuted;
+}
+
+monitor OffLimitMarketOrder{
+	action onload{
+		
+		print currentTime.toString();
+		
+		LimitOrder limitOrder;  //因为apama每次只执行一个event，所以不会出现多线程覆盖的情况，因为没有多线程
+		on all LimitOrder(side = "BUY"):limitOrder {
+			log currentTime.toString() + " Receive a buy limit order:" + limitOrder.toString();
+			com.apama.lab.marketdata.BestBidAsk tick;
+			on com.apama.lab.marketdata.BestBidAsk(symbol = limitOrder.symbol, bestAsk <=limitOrder.price): tick{ //这里会执行一个深拷贝，limitorder不会被覆盖
+				log currentTime.toString() + " " + "start buying " + tick.toString();
+				integer id := integer.getUnique();
+				route NewOrder(id, limitOrder.symbol,limitOrder.side,limitOrder.qty,tick.bestAsk);
+				OrderFinished fill;
+				on OrderFinished(orderId = id):fill {//这里的判断是很有必要的，因为simulator中有wait语句，造成这里可能会同时处理多条tick，也就是会有多个orderFinished listener监听，
+					//如果返回了一个orderFinished event，而所有的listener又没有判断id的话，那么所有的listener都会被触发，结果就是导致后面返回的orderFinished event没有listener处理。
+					log currentTime.toString() + " " + "Order " + fill.symbol + " executed " + fill.qtyExecuted.toString() + " @price " + fill.priceExecuted.toString();
+				}
+			}
+			
+			//processLImitOrder(limitOrder);
+		}
+	}
+	
+	//action processLImitOrder(LimitOrder limitOrder) {
+	
+/*		while(1=1){
+			integer id := integer.getUnique();
+			route request(id);
+			on all Response(refId = id) {    前面的code会出现listener泄露， 去掉all就可以了。
+				
+			}
+		}*/
+		
+		/*on all Trade(tradeType = "new"):trade {
+			on Trade(tradeType = "cancel", tradeId = trade.id) {
+				//这里的cancel发生的几率是1%， 所以这里导致99%的listener不会被触发，也就是会常驻内存，造成listener leak, 可以设立全局dictionary存储所有trade，当发现cancel后再进行查询
+			}
+		}*/
+	//}
+	
+/*	action listenerLeak {//解决response的分之情况的2中方式
+		listener l;  //方式一
+		l := on Ack() {
+			l.quit();
+		}
+		
+		listener l2;
+		l2 := on Nack() {
+			l2.quit()''
+		}
+		
+	//方式二
+		on Ack() or not Nack() {
+			
+		}
+		on Nack() or not Ack() {
+			
+		}*/
+	
+}
